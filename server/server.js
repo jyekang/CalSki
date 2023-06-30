@@ -5,4 +5,6 @@ import mongoose from 'mongoose';
 
 const app = express();
 
-//janice testing
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));

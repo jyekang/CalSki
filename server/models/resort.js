@@ -1,8 +1,8 @@
-import mongoose from'mongoose'
 import { Schema } from'mongoose'
 
 const Resort = new Schema (
     {
+        resortName: { type: String, required: true },
         region: { type: String, required: true},
         image: { type: String, required: true },
         verticalRise: { type: Number, required: true },
@@ -22,5 +22,4 @@ const Resort = new Schema (
     { timestamps: true }
 )
 
-
-module.exports = mongoose.model('Resort', Resort)
+export default Resort
