@@ -17,6 +17,10 @@ const User = new Schema(
             required: true,
             unique: true,
             validate: /[\w._%+-]+@[\w.-]+\.[a-zA-Z]{2,4}/
+        },
+        favResorts: {
+            type: Array,
+            default: []
         }
     },
     {
