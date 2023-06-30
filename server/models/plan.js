@@ -10,5 +10,4 @@ const Plan = new Schema(
     {timestamps: true}
 )
 
-module.exports = Plan
-
+export default Plan
