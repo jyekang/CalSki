@@ -1,7 +1,9 @@
-const mongoose = require('mongoose')
+import mongoose from "mongoose"
+import dotenv from 'dotenv'
+dotenv.config()
 
 mongoose
-    .connect(`mongodb://127.0.0.1:27017/calski`)
+    .connect(`mongodb+srv://${process.env.DATABASE_NAME}:${process.env.DATABASE_PASSWORD}@calski.lyliq7c.mongodb.net/`)
     .then(() => {
         console.log('Successfully connected to MongoDB.')
     })
@@ -9,7 +11,6 @@ mongoose
         console.error('Connection error', e.message)
     })
 
-
 const db = mongoose.connection
 
-module.exports = db
+export default db
