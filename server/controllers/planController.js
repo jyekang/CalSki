@@ -10,18 +10,26 @@ const getPlans = async (req, res) => {
 
 const getPlanById = async (req, res) => {
     try { const plan = await Plan.findById(req.params.id)
-        return res.status(200).json({plan})
-    } catch (error) {
-        return res.status(500).json({ message: error.message })
-        }
+        if (plan) {
+            return res.status(200).json({plan})
+        } else {
+            return res.status(404).json({ message: 'Plan not found' })
+            }
+        } catch (error) {
+            return res.status(500).json({ message: error.message })
+            }
 }
 
 const deletePlan = async (req, res) => {
     try { const plan = await Plan.findByIdAndDelete(req.params.id)
-        return res.status(200).json({plan})
-    } catch (error) {
-        return res.status(500).json({ message: error.message })
-        }
+        if (plan) {
+            return res.status(200).json({plan})
+        } else {
+            return res.status(404).json({ message: 'Plan not found' })
+            }
+        } catch (error) {
+            return res.status(500).json({ message: error.message })
+            }
 }
 
  const createPlan = async (req, res) => {
@@ -34,10 +42,14 @@ const deletePlan = async (req, res) => {
 
 const updatePlan = async (req, res) => {
     try { const plan = await Plan.findByIdAndUpdate(req.params.id, req.body)
-        return res.status(200).json({plan})
-    } catch (error) {
-        return res.status(500).json({ message: error.message })
-        }
+        if (plan) {
+            return res.status(200).json({plan})
+        } else {
+            return res.status(404).json({ message: 'Plan not found' })
+            }
+        } catch (error) {
+            return res.status(500).json({ message: error.message })
+            }
 }
 
 export default { getPlans, getPlanById, deletePlan, createPlan, updatePlan }
