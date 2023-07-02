@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Home from './Home'
-import Login from './Login'
-import Resorts from './Resorts'
-import ResortsDetail from './ResortsDetail'
-import MyFavorites from './MyFavorites'
+import Home from './Home.jsx'
+import Login from './Login.jsx'
+import Resorts from './Resorts.jsx'
+import ResortsDetail from './ResortsDetail.jsx'
+import MyFavorites from './MyFavorites.jsx'
 
 const Main = () => {
     return (
@@ -19,3 +19,5 @@ const Main = () => {
         </div>
     )
 }
+
+export default Main
