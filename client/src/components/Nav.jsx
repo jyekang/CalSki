@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
-    <div>
-        <h1>Nav</h1>
-
+    <div className='nav'>
+      <Link to='/'>Home</Link>
     </div>
   )
 }
