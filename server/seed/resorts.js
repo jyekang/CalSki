@@ -1,5 +1,6 @@
-import db from '../db';
-import Resort from '../models/resort'
+import Models from '../models/index.js'
+import db from '../db/index.js'
+const { Resorts } = Models
 
 db.on('error', console.error.bind(console, 'connection error:'));
 
@@ -501,8 +502,7 @@ const resorts = [
       contactWebsite: "http://www.travelyosemite.com/winter/yosemite-ski-snowboard-area/"
     }
   ]
-  await Resort.deleteMany({})
-  await Resort.insertMany(resorts)
+  await Resorts.insertMany(resorts)
   console.log(`seeded resorts`)
 }
 
@@ -512,4 +512,3 @@ const run = async () => {
 }
 
 run()
-  
