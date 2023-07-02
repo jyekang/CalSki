@@ -2,6 +2,8 @@ import mongoose from "mongoose"
 import dotenv from 'dotenv'
 dotenv.config()
 
+console.log(`mongodb+srv://${process.env.DATABASE_NAME}:${process.env.DATABASE_PASSWORD}@calski.lyliq7c.mongodb.net/`)
+
 mongoose
     .connect(`mongodb+srv://${process.env.DATABASE_NAME}:${process.env.DATABASE_PASSWORD}@calski.lyliq7c.mongodb.net/`)
     .then(() => {
