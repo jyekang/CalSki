@@ -1,15 +1,16 @@
-const express = require('express');
-const router = express.Router();
-const { getAllResorts, getAllResortsById, createResort, updateResort, deleteResort } = require('../controllers/resortController');
+import express from 'express';
 
-const path = require('path');
+import controllers from '../controllers/resortController.js';
+const { getAllResorts, getResortById, createResort, updateResort, deleteResort } = controllers;
 
-router.get('/getAllResorts', getAllResorts);
-router.post('/getAllResorts', createResort);
-router.get('/getAllResorts/:id', getAllResortsById);
-router.put('/getAllResorts/:id', updateResort);
-router.delete('/getAllResorts/:id', deleteResort);
+const Router = express.Router();
 
-module.exports = router;
+Router.get('/', getAllResorts);
+Router.post('/', createResort);
+Router.get('/:id', getResortById);
+Router.put('/:id', updateResort);
+Router.delete('/:id', deleteResort);
+
+export default Router;
 
 
