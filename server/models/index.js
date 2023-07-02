@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-import userSchema from "user";
-import planSchema from "plan";
-import resortSchema from "resort";
+import User from "./user.js";
+import Plan from "./plan.js";
+import Resort from "./resort.js";
 
-const Users = mongoose.model("Users", userSchema);
-const Plans = mongoose.model("Plans", planSchema);
-const Resorts = mongoose.model("Resorts", resortSchema);
+const Users = mongoose.model("Users", User);
+const Plans = mongoose.model("Plans", Plan);
+const Resorts = mongoose.model("Resorts", Resort);
 
 export default { Users, Plans, Resorts };
