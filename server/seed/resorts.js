@@ -528,6 +528,7 @@ const resorts = [
       coordiantes: '37.662454, -119.663278'
     }
   ]
+  await Resorts.deleteMany({})
   await Resorts.insertMany(resorts)
   console.log(`seeded resorts`)
 }
