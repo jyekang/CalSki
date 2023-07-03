@@ -11,6 +11,19 @@ const getAllResorts = async (req, res) => {
     }
 }
 
+const getResortByName = async (req, res) => {
+    try {
+        const resortName = req.params.name;
+        const resort = await Resorts.findOne({ name: resortName })
+        if (resort) {
+            return res.status(200).json({ resort });
+        }
+        return res.status(404).send('Resort with the specified name does not exists');
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
 
 const createResort = async (req, res) => {
     try {
@@ -70,6 +83,7 @@ export default {
     createResort,
     getResortById,
     updateResort,
-    deleteResort
+    deleteResort, 
+    getResortByName
 }
 
