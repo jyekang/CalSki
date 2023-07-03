@@ -1,4 +1,4 @@
-import Resort from '../models/resort';
+import Resort from '../models/resort.js';
 
 const getAllResorts = async (req, res) => {
     try {

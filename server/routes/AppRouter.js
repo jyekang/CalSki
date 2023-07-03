@@ -1,7 +1,7 @@
 import express from 'express';
-import planRouter from './planRouter';
-import resortRouter from './resortRouter';
-import userRouter from './userRouter';
+import planRouter from './planRouter.js';
+import resortRouter from './resortRouter.js';
+import userRouter from './userRouter.js';
 
 const Router = express.Router();
 
