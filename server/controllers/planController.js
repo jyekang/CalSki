@@ -1,7 +1,9 @@
-import Plan from  '../models/plan.js'
+import models from '../models/index.js'
+const { Plans } = models
+
 
 const getPlans = async (req, res) => {
-    try { const plans = await Plan.find()
+    try { const plans = await Plans.find()
         return res.status(200).json({plans})
     } catch (error) {
         return res.status(500).json({ message: error.message })
@@ -9,7 +11,7 @@ const getPlans = async (req, res) => {
 }
 
 const getPlanById = async (req, res) => {
-    try { const plan = await Plan.findById(req.params.id)
+    try { const plan = await Plans.findById(req.params.id)
         if (plan) {
             return res.status(200).json({plan})
         } else {
@@ -21,7 +23,7 @@ const getPlanById = async (req, res) => {
 }
 
 const deletePlan = async (req, res) => {
-    try { const plan = await Plan.findByIdAndDelete(req.params.id)
+    try { const plan = await Plans.findByIdAndDelete(req.params.id)
         if (plan) {
             return res.status(200).json({plan})
         } else {
@@ -33,7 +35,7 @@ const deletePlan = async (req, res) => {
 }
 
  const createPlan = async (req, res) => {
-    try { const plan = await Plan.create(req.body)
+    try { const plan = await Plans.create(req.body)
         return res.status(200).json({plan})
     } catch (error) {
         return res.status(500).json({ message: error.message })
@@ -41,7 +43,7 @@ const deletePlan = async (req, res) => {
 }
 
 const updatePlan = async (req, res) => {
-    try { const plan = await Plan.findByIdAndUpdate(req.params.id, req.body)
+    try { const plan = await Plans.findByIdAndUpdate(req.params.id, req.body)
         if (plan) {
             return res.status(200).json({plan})
         } else {
