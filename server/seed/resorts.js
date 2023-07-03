@@ -24,7 +24,8 @@ const resorts = [
       nearbyResorts: "[Snow Summit Mountain Resort]",
       contactAddress: "56700 Rancheria Rd Wofford Heights, CA 93285",
       contactEmail: "contactus@altasierra.com",
-      contactWebsite: "altasierra.com/v2"
+      contactWebsite: "altasierra.com/v2",
+      coordinates: '35.711162, -118.560221'
     },
     {
       resortName: "Bear Valley",
@@ -43,7 +44,8 @@ const resorts = [
       nearbyResorts: "[Dodge Ridge, Kirkwood Ski Resort]",
       contactAddress: "2280 State Route 207, Bear Valley , CA 95223",
       contactEmail: "fun@bearvalley.com",
-      contactWebsite: "http://www.bearvalley.com/"
+      contactWebsite: "http://www.bearvalley.com/",
+      coordinates: '38.492712, -120.044469'
     },
     {
       resortName: "Big Bear Mountain",
@@ -62,7 +64,8 @@ const resorts = [
       nearbyResorts: "[Snow Summit Mountain Resort, Snow Valley]",
       contactAddress: "43101 Goldmine Drive, Big Bear Lake , CA 92305",
       contactEmail: "info@bbmr.com",
-      contactWebsite: "http://www.bigbearmountainresorts.com/"
+      contactWebsite: "http://www.bigbearmountainresorts.com/",
+      coordinates: '34.227912, -116.860829'
     },
     {
       resortName: "Boreal Mountain Resort",
@@ -81,7 +84,8 @@ const resorts = [
       nearbyResorts: "[Alpine Meadows, Donner Ski Ranch, Homewood Mountain Resort, Northstar-at-Tahoe, Soda Springs, Squaw Valley, Sugar Bowl, Tahoe Donner]",
       contactAddress: "19749 Boreal Ridge Road, Soda Springs , CA 95728",
       contactEmail: "borealinfo@borealski.com",
-      contactWebsite: "http://www.skiboreal.com/winter/index.html"
+      contactWebsite: "http://www.skiboreal.com/winter/index.html",
+      coordinates: '39.333566, -120.354952'
     },
     {
       resortName: "Buckhorn Ski/Snowboard Club",
@@ -100,7 +104,8 @@ const resorts = [
       nearbyResorts: "[Mount Waterman]",
       contactAddress: "58.33 mile marker Angeles National Forest, Angeles Crest Hwy, Pearblossom, CA 93553",
       contactEmail: "contact@buckhornlodge.org",
-      contactWebsite: "https://www.buckhornlodge.org/"
+      contactWebsite: "https://www.buckhornlodge.org/",
+      coordinates: '34.342044, -117.919723'
     },
     {
       resortName: "China Peak",
@@ -119,7 +124,8 @@ const resorts = [
       nearbyResorts: "",
       contactAddress: "59265 Highway 168, Lakeshore , CA 93634",
       contactEmail: "info@skichinapeak.com",
-      contactWebsite: "http://www.skichinapeak.com/"
+      contactWebsite: "http://www.skichinapeak.com/",
+      coordinates: '37.236329, -119.157175'
     },
     {
       resortName: "Dodge Ridge",
@@ -138,7 +144,8 @@ const resorts = [
       nearbyResorts: "[Bear Valley]",
       contactAddress: "1 Dodge Ridge Road, Pinecrest , CA 95364",
       contactEmail: "info@dodgeridge.com",
-      contactWebsite: "http://www.dodgeridge.com/"
+      contactWebsite: "http://www.dodgeridge.com/",
+      coordinates: '38.189968, -119.956095'
     },
     {
       resortName: "Donner Ski Ranch",
@@ -157,7 +164,8 @@ const resorts = [
       nearbyResorts: "[Alpine Meadows, Boreal Mountain Resort, Boreal Mountain Terrain Park, Homewood Mountain Resort, Northstar-at-Tahoe, Soda Springs, Squaw Valley, Sugar Bowl, Tahoe Donner]",
       contactAddress: "19320 Donner Pass Road, Norden , CA 95724",
       contactEmail: "dsrinfo@donnerskiranch.com",
-      contactWebsite: "http://www.donnerskiranch.com/"
+      contactWebsite: "http://www.donnerskiranch.com/",
+      coordinates: '39.318210, -120.329862'
     },
     {
       resortName: "Heavenly",
@@ -176,7 +184,8 @@ const resorts = [
       nearbyResorts: "Alpine Meadows, Homewood Mountain Resort, Kirkwood Ski Resort, Northsta-at-Tahoe, Sierra at Tahoe, Squaw Valley]",
       contactAddress: "3860 Saddle Road, South Lake Tahoe , CA 96150",
       contactEmail: "Heavenlyinfo@vailresorts..com",
-      contactWebsite: "http://www.skiheavenly.com/"
+      contactWebsite: "http://www.skiheavenly.com/",
+      coordinates: '38.937022, -119.938505'
     },
     {
       resortName: "Homewood Mountain resort",
@@ -195,7 +204,8 @@ const resorts = [
       nearbyResorts: "[Alpine Meadows, Boreal Mountain Resort, Boreal Mountain Terrain Park, Donner Ski Ranch, Heavenly, Northstar-at-Tahoe, Sierra at Tahoe, Soda Springs, Squaw Valley, Sugar Bowl, Tahoe Donner]",
       contactAddress: "5145 Westlake Blvd, Homewood , CA 96141",
       contactEmail: "guestservices@skihomewood.com",
-      contactWebsite: "http://www.skihomewood.com/"
+      contactWebsite: "http://www.skihomewood.com/",
+      coordinates: '39.085653, -120.160249'
     },
     {
       resortName: "June Mountain",
@@ -214,7 +224,8 @@ const resorts = [
       nearbyResorts: "[Mammoth]",
       contactAddress: "3819 Hwy 158, June Lake , CA 93529",
       contactEmail: "aross@mammothresorts.com",
-      contactWebsite: "http://www.junemountain.com/"
+      contactWebsite: "http://www.junemountain.com/",
+      coordinates: '37.767567, -119.090751'
     },
     {
       resortName: "Kirkwood Ski Resort",
@@ -233,7 +244,8 @@ const resorts = [
       nearbyResorts: "[Heavenly, Sierra at Tahoe]",
       contactAddress: "1501 Kirkwood Meadows Drive, Kirkwood , CA 95646",
       contactEmail: "info@kirkwood.com",
-      contactWebsite: "http://www.kirkwood.com/"
+      contactWebsite: "http://www.kirkwood.com/",
+      coordinates: '38.684348, -120.065448'
     },
     {
       resortName: "Mammoth",
@@ -252,7 +264,8 @@ const resorts = [
       nearbyResorts: "[June Mountain]",
       contactAddress: "10001 Minaret Road, Mammoth Lakes , CA 93546",
       contactEmail: "800MAMMOTH@mammothresorts.com",
-      contactWebsite: "http://www.mammothmountain.com/"
+      contactWebsite: "http://www.mammothmountain.com/",
+      coordinates: '37.651216, -119.036948'
     },
     {
       resortName: "Mount Baldy",
@@ -271,7 +284,8 @@ const resorts = [
       nearbyResorts: "",
       contactAddress: "Mt Baldy Road, Mt Baldy , CA 91759",
       contactEmail: "contactus@mtbaldy.com",
-      contactWebsite: "http://mtbaldyskilifts.com/"
+      contactWebsite: "http://mtbaldyskilifts.com/",
+      coordinates: '34.237796, -117.657823'
     },
     {
       resortName: "Mount Shasta",
@@ -290,7 +304,8 @@ const resorts = [
       nearbyResorts: "",
       contactAddress: "4500 Ski Park Hwy, McCloud , CA 96057",
       contactEmail: "thinksnow@skipark.com",
-      contactWebsite: "https://www.skipark.com/"
+      contactWebsite: "https://www.skipark.com/",
+      coordinates: '41.320922, -122.203831'
     },
     {
       resortName: "Mount Waterman",
@@ -307,9 +322,10 @@ const resorts = [
       ticketAdult: 70,
       ticketSenior: 30,
       nearbyResorts: "",
-      contactAddress: "CA-2, La Ca�ada Flintridge, CA 93553",
+      contactAddress: "CA-2, La Canada Flintridge, CA 93553",
       contactEmail: "mtwaterman@outlook.com",
-      contactWebsite: "http://www.mtwaterman.org/"
+      contactWebsite: "http://www.mtwaterman.org/",
+      coordinates: '34.349542, -117.928732'
     },
     {
       resortName: "Mountain High Ski Area",
@@ -328,7 +344,8 @@ const resorts = [
       nearbyResorts: "[Snow Valley]",
       contactAddress: "24510 Highway 2, Wrightwood , CA 92397",
       contactEmail: "john@mthigh.com",
-      contactWebsite: "http://www.mthigh.com/"
+      contactWebsite: "http://www.mthigh.com/",
+      coordinates: '34.377067, -117.691463'
     },
     {
       resortName: "Northstar-at-Tahoe",
@@ -347,7 +364,8 @@ const resorts = [
       nearbyResorts: "[Alphine Meadows, Boreal Mountain Resort, Boreal Mountain Terrain Park, Donner Ski Ranch, Heavenly, Homewood Mountain Resort, Soda Spring, Squaw Valley, Sugar Bowl, Tahoe Donner]",
       contactAddress: "100 Northstar Drive, Truckee , CA 96161",
       contactEmail: "northstar@vailresorts.com",
-      contactWebsite: "http://www.northstarattahoe.com/"
+      contactWebsite: "http://www.northstarattahoe.com/",
+      coordinates: '39.287085, -120.104330'
     },
     {
       resortName: "Palisades Tahoe",
@@ -366,7 +384,8 @@ const resorts = [
       nearbyResorts: "[Alphine Meadows, Boreal Mountain Resort, Boreal Mountain Terrain Park, Donner Ski Ranch, Heavenly, Homewood Mountain Resort, Northstar-at-Tahoe, Soda Spring, Sugar Bowl, Tahoe Donner]",
       contactAddress: "1960 Squaw Valley Road, Olympic Valley , CA 96146",
       contactEmail: "info@palisadestahoe.com",
-      contactWebsite: "http://squawalpine.com/"
+      contactWebsite: "http://squawalpine.com/",
+      coordinates: '39.197240, -120.235679'
     },
     {
       resortName: "Sierra at Tahoe",
@@ -385,7 +404,8 @@ const resorts = [
       nearbyResorts: "[Heavenly, Homewood Mountain Resort]",
       contactAddress: "1111 Sierra at Tahoe Road, Twin Bridges , CA 95735",
       contactEmail: "sierra@sierraattahoe.com",
-      contactWebsite: "http://www.sierraattahoe.com/"
+      contactWebsite: "http://www.sierraattahoe.com/",
+      coordinates: '38.800822, -120.082845'
     },
     {
       resortName: "Snow Summit Mountain Resort",
@@ -404,7 +424,8 @@ const resorts = [
       nearbyResorts: "[Big Bear Mountain, Snow Valley]",
       contactAddress: "880 Summit Blvd, Big Bear Lake , CA 92315",
       contactEmail: "info@bbmr.com",
-      contactWebsite: "http://www.snowsummit.com/"
+      contactWebsite: "http://www.snowsummit.com/",
+      coordinates: '34.236134, -116.888826'
     },
     {
       resortName: "Snow Valley",
@@ -423,7 +444,8 @@ const resorts = [
       nearbyResorts: "[Big Bear Mountain, Mountain High Ski Area, Snow Summit Mountain Resort]",
       contactAddress: "35100 Highway 18, 5 miles east of Running Springs, Running Springs , CA 92382",
       contactEmail: "svinfo@snow-valley.com",
-      contactWebsite: "http://www.snow-valley.com/index_english.html"
+      contactWebsite: "http://www.snow-valley.com/index_english.html",
+      coordinates: '34.225017, -117.036239'
     },
     {
       resortName: "Soda Spring",
@@ -442,7 +464,8 @@ const resorts = [
       nearbyResorts: "[Alphine Meadows, Boreal Mountain Resort, Boreal Mountain Terrain Park, Donner Ski Ranch, Homewood Mountain Resort, Northstar-at-Tahoe, Squaw Valley, Sugar Bowl, Tahoe Donner]",
       contactAddress: "10244 Soda Springs Road, Soda Springs , CA 95728",
       contactEmail: "info@skisodasprings.com",
-      contactWebsite: "http://www.skisodasprings.com/"
+      contactWebsite: "http://www.skisodasprings.com/",
+      coordinates: '39.319944, -120.379294'
     },
     {
       resortName: "Sugar Bowl",
@@ -461,7 +484,8 @@ const resorts = [
       nearbyResorts: "[Alphine Meadows, Boreal Mountain Resort, Boreal Mountain Terrain Park, Donner Ski Ranch, Homewood Mountain Resort, Northstar-at-Tahoe, Soda Spring, Squaw Valley, Tahoe Donner]",
       contactAddress: "629 Sugar Bowl Road, Norden , CA 95724",
       contactEmail: "info@sugarbowl.com",
-      contactWebsite: "http://www.skisugarbowl.com/"
+      contactWebsite: "http://www.skisugarbowl.com/",
+      coordinates: '39.303085, -120.337371'
     },
     {
       resortName: "Tahoe Donner",
@@ -480,7 +504,8 @@ const resorts = [
       nearbyResorts: "[Apine Meadows, Boreal Mountain Resort, Boreal Mountain Tereain Park, Donner Ski Ranch, Homewood Mountain Resort, Northstar-at-Tahoe, Soda Springs, Squaw Valley, Sugar Valley, Sugar Bowl]",
       contactAddress: "11603 Snowpeak Way, Truckee , CA 96161",
       contactEmail: "ski@tahoedonner.com",
-      contactWebsite: "http://www.tahoedonner.com/"
+      contactWebsite: "http://www.tahoedonner.com/",
+      coordinates: '39.354535, -120.259242'
     },
     {
       resortName: "Yosemite Ski & Snowboard Area",
@@ -499,9 +524,11 @@ const resorts = [
       nearbyResorts: "",
       contactAddress: "Glacier Point Road, Yosemite National Park , CA 95389",
       contactEmail: "smayer@delawarenorth.com",
-      contactWebsite: "http://www.travelyosemite.com/winter/yosemite-ski-snowboard-area/"
+      contactWebsite: "http://www.travelyosemite.com/winter/yosemite-ski-snowboard-area/",
+      coordiantes: '37.662454, -119.663278'
     }
   ]
+  await Resorts.deleteMany({})
   await Resorts.insertMany(resorts)
   console.log(`seeded resorts`)
 }

@@ -18,7 +18,10 @@ const Resort = new Schema (
         nearbyResorts: { type: Array },
         contactAddress: { type: String, required: true },
         contactEmail: { type: String, required: true },
-        contactWebsite: { type: String, required: true }
+        contactWebsite: { type: String, required: true },
+        coordinates: { type: String }
+
+
         
     },
     { timestamps: true }
