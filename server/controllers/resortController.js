@@ -1,9 +1,11 @@
-import Resort from '../models/resort.js';
+import models from '../models/index.js'
+const { Resorts } = models
+
 
 const getAllResorts = async (req, res) => {
     try {
-        const resorts = await Resort.find()
-        return res.status(200).json({ resorts })
+        const resorts = await Resorts.find()
+        return res.status(200).json( resorts )
     } catch (error) {
         return res.status(500).json(error.message);
     }
@@ -12,7 +14,7 @@ const getAllResorts = async (req, res) => {
 
 const createResort = async (req, res) => {
     try {
-        const resort = await new Resort(req.body)
+        const resort = await new Resorts(req.body)
         await resort.save()
         return res.status(200).json({ resort })
     } catch (error) {
@@ -25,7 +27,7 @@ const createResort = async (req, res) => {
 const getResortById = async (req, res) => {
     try {
             const resortId = req.params.id;
-            const resort = await Resort.findById(resortId)
+            const resort = await Resorts.findById(resortId)
             if (resort) {
                 return res.status(200).json({ resort });
             }
@@ -39,7 +41,7 @@ const getResortById = async (req, res) => {
 const updateResort = async (req, res) => {
     try {
             const resortId = req.params.id;
-            const resort = await Resort.findByIdAndUpdate(resortId, req.body, { new: true })
+            const resort = await Resorts.findByIdAndUpdate(resortId, req.body, { new: true })
             if (resort) {
                 return res.status(200).json({ resort });
             }
@@ -52,7 +54,7 @@ const updateResort = async (req, res) => {
 const deleteResort = async (req, res) => {
     try {
             const resortId = req.params.id;
-            const deleted = await Resort.findByIdAndDelete(resortId)
+            const deleted = await Resorts.findByIdAndDelete(resortId)
             if (deleted) {
                 return res.status(200).send("Resort deleted");
             }
