@@ -1,16 +1,15 @@
 import express from 'express';
-import planRouter from './plan/Router';
+import planRouter from './planRouter';
 import resortRouter from './resortRouter';
 import userRouter from './userRouter';
 
-const router = express.Router();
+const Router = express.Router();
 
-router.use('/plan', planRouter);
-router.use('/resort', resortRouter);
-router.use('/user', userRouter);
+Router.use('/plan', planRouter);
+Router.use('/resort', resortRouter);
+Router.use('/user', userRouter);
 
-export default router;
-
+export default Router;
 
 // import Router from ('express').Router()
 

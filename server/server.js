@@ -1,5 +1,5 @@
 import express from 'express';
-
+import AppRouter from './routes/AppRouter.js';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -16,7 +16,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/api', router);
+app.use('/api', AppRouter);
 
 app.get('/', (req, res) => res.send('Server works'))
 

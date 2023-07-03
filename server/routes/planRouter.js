@@ -13,9 +13,8 @@
 
 
 import express from 'express';
-const Router = express.Router();
-
 import controller from '../controllers/planController.js'
+const Router = express.Router();
 
 Router.get('/', controller.getPlans)
 Router.get('/:id', controller.getPlanById)
