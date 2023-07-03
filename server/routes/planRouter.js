@@ -13,13 +13,16 @@
 
 
 import express from 'express';
-import controller from '../controllers/planController.js'
+import controllers from '../controllers/planController.js'
+
+const { getPlans, getPlanById, createPlan, updatePlan, deletePlan } = controllers;
+
 const Router = express.Router();
 
-Router.get('/', controller.getPlans)
-Router.get('/:id', controller.getPlanById)
-Router.post('/', controller.createPlan)
-Router.put('/:id', controller.updatePlan)
-Router.delete('/:id', controller.deletePlan)
+Router.get('/', getPlans)
+Router.get('/:id', getPlanById)
+Router.post('/', createPlan)
+Router.put('/:id', updatePlan)
+Router.delete('/:id', deletePlan)
 
 export default Router
