@@ -7,12 +7,12 @@ const Home = () => {
   return (
     <div className='home'>
         <div className='home-content-1 position-relative'>
-            <h1 className='p-5'>Put your title here</h1>
-            <h2>Put your subtitle here</h2>
-        </div>
-        <div className='home-content-2 position-relative'>
             <h1 className='p-5 text-white'>Put your title here</h1>
             <h2 className='text-white'>Put your subtitle here</h2>
+        </div>
+        <div className='home-content-2 position-relative'>
+            <h1 className='p-5'>Put your title here</h1>
+            <h2 className=''>Put your subtitle here</h2>
         </div>
     </div>
   )
