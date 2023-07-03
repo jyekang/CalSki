@@ -36,6 +36,7 @@ const deletePlan = async (req, res) => {
 
  const createPlan = async (req, res) => {
     try { const plan = await Plans.create(req.body)
+        await plan.save()
         return res.status(200).json({plan})
     } catch (error) {
         return res.status(500).json({ message: error.message })
