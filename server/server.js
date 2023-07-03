@@ -3,6 +3,7 @@ import AppRouter from './routes/AppRouter.js';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import db from './db/index.js'
 import mongoose from 'mongoose';
 import router from './routes/AppRouter.js';
 
