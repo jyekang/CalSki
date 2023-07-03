@@ -4,7 +4,7 @@ import Home from './Home.jsx'
 import Login from './Login.jsx'
 import Resorts from './Resorts.jsx'
 import ResortsDetail from './ResortsDetail.jsx'
-import MyFavorites from './MyFavorites.jsx'
+import Plans from './Plans.jsx'
 
 const Main = () => {
     return (
@@ -14,7 +14,7 @@ const Main = () => {
                 <Route path='/login' element={<Login />} />
                 <Route path='/resorts' element={<Resorts />} />
                 <Route path='/resorts/:id' element={<ResortsDetail />} />
-                <Route path='/myfavorites' element={<MyFavorites />} />
+                <Route path='/plans' element={<Plans />} />
             </Routes>
         </div>
     )

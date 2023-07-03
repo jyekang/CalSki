@@ -1,8 +1,20 @@
-import React from 'react'
+import img from '../assets/heavenly-tahoe.jpg'
+import img2 from '../assets/diamond-peak.jpg'
+import img3 from '../assets/tahoe-ski-3.jpg'
+import img4 from '../assets/tahoe-ski-4.jpg'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className='home'>
+        <div className='home-content-1 position-relative'>
+            <h1 className='p-5'>Put your title here</h1>
+            <h2>Put your subtitle here</h2>
+        </div>
+        <div className='home-content-2 position-relative'>
+            <h1 className='p-5 text-white'>Put your title here</h1>
+            <h2 className='text-white'>Put your subtitle here</h2>
+        </div>
+    </div>
   )
 }
 
