@@ -46,9 +46,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -59,6 +61,7 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   /* a:hover {
     color: #747bff;
   } */
@@ -67,17 +70,58 @@ button:focus-visible {
   }
 }
 
-.card img {
-  border-radius: 20px 20px 0 0;
-  width: 100%;
-  height: 20vh;
+.result-list {
+  margin: 50px auto;
+  width: 890px;
 }
 
-.card {
-  border-radius: 20px;
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 270px);
+  grid-gap: 40px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .result-list {
+    width: 692px;
+  }
+  .result-grid {
+    grid-gap: 40px;
+  }
+}
+
+@media screen and (max-width: 734px) {
+  .result-list {
+    width: 87.5%;
+  }
+  .result-grid {
+    grid-gap: 25px;
+  }
+}
+
+.result-item {
+  width: 270px;
+}
+
+.item-card {
+  border-radius: 10px;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
-.container .col {
-  margin-bottom: 20px;
+.item-img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 20px;
+  min-height: 150px;
 }
