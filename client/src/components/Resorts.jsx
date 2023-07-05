@@ -29,21 +29,25 @@ const Resorts = () => {
     setSearch(e.target.value)
   }
 
+  const showResort = (e) => {
+    navigate(e)
+  }
+
   console.log(resorts)
 
   return (
     <div className='resorts'>
-      <form className='search'>
+      {/* <form className='search'>
         <input type='text' placeholder='Search for a resort' className='search-bar' onChange={handleChange} value={search}/>
         <button type='submit' onClick={handleSearch}>Search</button>
-      </form>
+      </form> */}
       <div className='result-list'>
         <div className='result-grid'>
           {
             resorts.map(resort => (
               <div className='result-item' key={resort._id}>
-                <div className='item-card'>
-                  <img src={`${resort.image}`} alt={resort.resortName} className='item-img' onClick={() => navigate(`/resorts/${resort._id}`)}/>
+                <div className='item-card' onClick={() => {showResort(resort._id)}}>
+                  <img src={`${resort.image}`} alt={resort.resortName} className='item-img' onClick={() => navigate(`${resort._id}`)}/>
                   <div className='item-content text-start'>
                     <h6 className=''>{resort.resortName}</h6>
 
