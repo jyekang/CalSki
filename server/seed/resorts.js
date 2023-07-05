@@ -30,7 +30,7 @@ const resorts = [
     {
       resortName: "Bear Valley",
       region: "Central California",
-      image: "https://www.skiresort.info/typo3temp/assets/_processed_/58/88/8e/e4/7f8912b9a9.jpg",
+      image: "https://www.snow-forecast.com/pistemaps/Bear-Valley_pistemap.jpg?1601557214",
       description: "Bear Valley is a four season resort located between Lake Tahoe and Yosemite in the Central Sierra Mountains. With such a large skiable area of 1,280 acres you will never lack terrain. Winter activities also include cross-country skiing, snowshoeing, snowboarding, snowmobiling, dog sledding and backcountry adventures.",
       verticalRise: 1900,
       baseElevation: 6600,
@@ -50,7 +50,7 @@ const resorts = [
     {
       resortName: "Big Bear Mountain",
       region: "Southern California",
-      image: "https://snowjamshow.com/wp-content/uploads/2020/01/bear-mountain-trail-map-768x543.jpg",
+      image: "https://i0.wp.com/moonridgefamilylodge.com/wp-content/uploads/2020/10/bear-mountain-ski-slopes-map-hires-scaled.jpg?ssl=1",
       description: "This high elevation ski resort is located in Big Bear Lake, California in the San Bernardino Mountains. Lift tickets are also good for Snow Summit. Bear Mountainis a 200 acre winter playground offering over 100 features in it's terrain park.",
       verticalRise: 1665,
       baseElevation: 7140,
@@ -110,7 +110,7 @@ const resorts = [
     {
       resortName: "China Peak",
       region: "Central California",
-      image: "https://media.skigebiete-test.de/images/ecu/entity/e_skiresort/ski-resort_china-peak_n4756-149783-1_pan.jpg",
+      image: "http://www.californiaskimaps.com/images/ski-china-peak/ski_china_peak_trail_map.jpg",
       description: "China Peak Mountain Resort is located 65 miles northeast of Fresno at scenic Huntington Lake in the Sierra National Forest.",
       verticalRise: 1679,
       baseElevation: 7030,
@@ -170,7 +170,7 @@ const resorts = [
     {
       resortName: "Heavenly",
       region: "Lake Tahoe / North",
-      image: "https://visitlaketahoe.com/wp-content/uploads/2020/11/heavenly-mountain-resort760x450.jpg",
+      image: "https://visitlaketahoe.com/wp-content/uploads/2020/11/HeavenlyTrailMap700.jpg",
       description: "Heavenly Ski Resort is located on the California-Nevada border in South Lake Tahoe. The resort has the largest snowmaking and grooming fleet on the West Coast. It features multiple terrain parks, 94 trails and a 3,500-foot vertical drop. Skiers and snowboarders can glide for miles, surrounded by the towering peaks of the Sierra, while overlooking Lake Tahoe, the high desserts of Nevada and the ranch lands of the Carson Valley.",
       verticalRise: 3500,
       baseElevation: 6255,
@@ -190,7 +190,7 @@ const resorts = [
     {
       resortName: "Homewood Mountain resort",
       region: "Lake tahoe / North",
-      image: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/36000/36726-Homewood-Mountain-Resort.jpg",
+      image: "https://www.snow-forecast.com/pistemaps/Homewood-Mountain-Resort_pistemap.jpg?1601557240",
       description: "Homewood Mountain Resort is set on the west shore of California's Lake Tahoe just south of Tahoe City. Many of the runs have spectacular lake views. Homewood has two terrain parks also having stunning lake views and terrain for all levels of expertise, from beginners to future X Games competitors. Homewood is located about an hour from Reno, NV, and about two hours from Sacramento, CA.",
       verticalRise: 1650,
       baseElevation: 6230,
@@ -210,7 +210,7 @@ const resorts = [
     {
       resortName: "June Mountain",
       region: "Central California",
-      image: "https://snowbrains.com/wp-content/uploads/2013/05/june_lake_road_no_boat_13.jpg",
+      image: "https://www.snow-forecast.com/pistemaps/June-Mountain_pistemap.jpg?1601557241",
       description: "This Northern California resort is located near June Lake, southeast of Yosemite National Park.It offers 2,500 vertical feet of tree-lined runs, and a world class terrain park. It's diverse terrain offers two summits. The resort also offers guided backcountry tours.",
       verticalRise: 2590,
       baseElevation: 7545,
@@ -230,7 +230,7 @@ const resorts = [
     {
       resortName: "Kirkwood Ski Resort",
       region: "Lake Tahoe / North",
-      image: "https://localfreshies.com/wp-content/uploads/2017/02/kirkwood_Mar-11-9-10-40-AM-1024x768.jpg",
+      image: "https://s3.onthesnow.com/images/trailmaps/lake-tahoe/kirkwood/20181229175226/xlarge.jpg",
       description: "Kirkwood is consistently rated in the top 10 for snow, terrain challenge and variety. It is located 90 minutes from Reno/Tahoe International Airport.",
       verticalRise: 2000,
       baseElevation: 7800,
@@ -250,7 +250,7 @@ const resorts = [
     {
       resortName: "Mammoth",
       region: "Cental California",
-      image: "https://mediaim.expedia.com/destination/1/5837d5801d885cc38cddd5b825ca3ed5.jpg",
+      image: "https://www.mammothsnowman.com/wp-content/uploads/2021/07/trail_map_mammoth_mountain_ski_area-1536x842.png",
       description: "Mammoth is located in Eastern California along the east side of the Sierra Nevada mountain range. It features 1,000's of acres of terrain and an altitude that keeps things white into summer making it one of the longest ski seasons in North America. The mountain is surrounded by the protected backdrop of Mt. Whitney and Yosemite National Park.",
       verticalRise: 3100,
       baseElevation: 7953,
@@ -270,7 +270,7 @@ const resorts = [
     {
       resortName: "Mount Baldy",
       region: "Southern California",
-      image: "https://images.squarespace-cdn.com/content/5f5b750c2612de46c3a1cbe2/1640686296101-X4D2SOTXPMRQ5ASQIRK7/Mt+Baldy+High+Shot.jpeg?content-type=image%2Fjpeg",
+      image: "https://baldyresort.com/wp-content/uploads/2020/12/alpine-trail-map-with-legend.jpg",
       description: "Skiing in Southern California. 26 runs spanning 3 mountains covering 800 acres with 2,100 vertical ft. Wide open glades, tree runs, bowls, moguls, groomed runs, cornices & quarter pipes.",
       verticalRise: 2100,
       baseElevation: 6500,
@@ -290,7 +290,7 @@ const resorts = [
     {
       resortName: "Mount Shasta",
       region: "Lake Tahoe / North",
-      image: "https://alpenglowexpeditions.com/wp-content/uploads/2021/04/IMG_4197-2.jpg",
+      image: "https://files.skimap.org/9iy642xm1wo5qqrvfjnuvhz7532k",
       description: "A full serve ski resort featuring alpine, nordic skiing and snowboarding. Located in Northern California just off of Interstate 5. Ski and stay lift ticket packages at local establishments.",
       verticalRise: 1453,
       baseElevation: 5500,
@@ -310,7 +310,7 @@ const resorts = [
     {
       resortName: "Mount Waterman",
       region: "Southern Califonia",
-      image: "http://www.mountainyahoos.com/SkiResorts/LA_SanGabrielMtns/MtWaterman/BeginnerLift_img_2622_1274x956.jpg",
+      image: "https://www.gieszl.com/snow/mtwaterman/img/waterman_map.jpg",
       description: "Mt. Waterman is a day ski and snowboard area close to the Los Angeles basin.",
       verticalRise: 1030,
       baseElevation: 7000,
@@ -330,7 +330,7 @@ const resorts = [
     {
       resortName: "Mountain High Ski Area",
       region: "Southern California",
-      image: "https://www.mthigh.com/site/connect/blog/authors/john_mccolly/east-resort-now-open/listing_picture_override/fullsize",
+      image: "https://images.squarespace-cdn.com/content/v1/5f5b750c2612de46c3a1cbe2/61cc8dee-a4f7-4059-8abc-8beef98b3c5d/Mountain+High+Trail+Map.jpg",
       description: "Mountain High Ski Resort is located just 75 minutes from Los Angeles and Orange County. The area consists of three separate mountains...Mountain High East, West, and North. It is usually the first resort to open for Southern California skiing and snowboarding each season and the only local area with night skiing seven nights-a-week.",
       verticalRise: 1600,
       baseElevation: 6600,
