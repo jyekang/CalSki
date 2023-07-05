@@ -14,15 +14,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: black;
-  text-decoration: inherit;
-}
-a:hover {
-  color: default;
-}
-
 body {
   margin: 0;
   min-width: 320px;
@@ -30,9 +21,11 @@ body {
 }
 
 .home h1 {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: bold;
   line-height: 1.1;
+  padding: 1.2em 0 1em 0;
+  margin: 0;
 }
 
 .detail-head h1 {
@@ -42,6 +35,25 @@ body {
   margin: 0;
 }
 
+.home .text-wrapper {
+  width: 70%;
+}
+
+@media screen and (max-width: 500px) {
+  .home .text-wrapper {
+    width: 100%;
+  }
+
+  .home h1 {
+    font-size: 2em;
+    margin: 12px 6px;
+  }
+
+  .home h3 {
+    font-size: 1.2em;
+  }
+}
+  
 /* button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -73,3 +85,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+

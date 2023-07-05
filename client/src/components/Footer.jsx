@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <div className="footer" style={{backgroundColor:'rgb(248,249,250)'}}>
-        <h6>Copyright J.E.X</h6>
+    <div className="footer d-flex align-items-center justify-content-center" style={{backgroundColor:'rgb(248,249,250)'}}>
+        <h6 m>Copyright J.E.X</h6>
     </div>
   )
 }
