@@ -3,30 +3,38 @@ import axios from 'axios'
 
 const Plans = () => {
 
-  const [plans, setPlan] = useState()
+  const [plans, setPlans] = useState([])
 
   useEffect(() => {
     const getPlan = async() => {
-      const response = await axios.get('http://localhost:3001/api/plans')
-      setPlan(response.data)
+      const response = await axios.get('http://localhost:3001/api/plan')
+      setPlans(response.data)
       console.log(response)
     }
     getPlan()
   },[])
 
   const handleChange = (e) => {
-    setPlan({...plan, [e.target.name]: e.target.value})
+    setPlans({...plans, [e.target.name]: e.target.value})
   }
 
+  console.log(plans)
+
   return (
+    
     <div>
+      {
+    plans.map((plan) => (
       <div className="card m-5" style={{width: "36rem"}}>
         <div className="card-body">
-          <h5 className="card-title">Alpine Resort <h5>August 5th, 2023</h5></h5>
-          <p className="card-text mt-4">My family and I would love to go here sometime. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto eligendi assumenda itaque quia possimus velit accusamus quis obcaecati doloribus illum veritatis enim voluptatum quisquam reprehenderit minus, nihil nostrum provident consequuntur! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, incidunt magnam officia iusto illum laudantium dolore natus temporibus aspernatur dolores perspiciatis, totam reiciendis, et voluptatibus laborum. Expedita, eum amet necessitatibus recusandae ea sequi ratione labore aspernatur quaerat repellendus quasi rerum repudiandae ut minima at ducimus, iure quo minus dolorem quidem!</p>
+          <h5 className="card-title">{plan.resortName}<h5>{plan.date}</h5></h5>
+          <p className="card-text mt-4">{plan.comment}</p>
           <button className="btn btn-success me-2" id="updateButton" type="button" data-bs-toggle="modal" data-bs-target="#planModal" data-bs-whatever="@mdo">Update</button><button className="btn btn-danger ms-2" id="deleteButton">Delete</button>
         </div>
       </div>
+    ))
+  }
+      
 
       <div className="modal fade" id="planModal" tabIndex="-1"    aria-labelledby="planModalLabel" aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered" style={{translate:'0px -5vh'}}>
