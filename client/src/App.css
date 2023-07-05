@@ -16,6 +16,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -37,19 +38,19 @@
 
 
 /* home page */
-.home-content-2 {
-  height: 600px;
-  background-size: cover;
-  background-position: center;
-  background-image: url('./assets/tahoe-ski-3.jpg');
-  margin-bottom: 10px;
-}
-
 .home-content-1 {
-  height: 600px;
+  height: 660px;
   background-size: cover;
   background-position: center;
   background-image: url('./assets/tahoe-ski-4.jpg');
+  margin-bottom: 10px;
+}
+
+.home-content-2 {
+  height: 660px;
+  background-size: cover;
+  background-position: top;
+  background-image: url('./assets/tahoe-ski-3.jpg');
   margin-bottom: 10px;
 }
 
@@ -106,6 +107,12 @@
   margin: 0 auto;
 }
 
+.detail-head a {
+  font-weight: 500;
+  color: black;
+  text-decoration: inherit;
+}
+
 .detail-head-grid {
   display: grid;
   grid-template-columns: 35px 1fr 35px;
@@ -133,6 +140,10 @@
   height: 40px
 }
 
+.detail-hero-img img {
+  border-radius: 15px;
+}
+
 /* .summary .item-card {
   background-color: white;
   border: 1px solid black;
@@ -140,18 +151,24 @@
 } */
 
 @media screen and (max-width: 1000px) {
-  .result-list, .detail-head{
+
+  .result-list,
+  .detail-head {
     width: 692px;
   }
+
   .result-grid {
     grid-gap: 40px;
   }
 }
 
 @media screen and (max-width: 734px) {
-  .result-list, .detail-head {
+
+  .result-list,
+  .detail-head {
     width: 87.5%;
   }
+
   .result-grid {
     grid-gap: 25px;
   }
