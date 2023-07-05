@@ -11,7 +11,7 @@ const Home = () => {
             <h2 className='text-white'>Welcome to CalSki! Plan your dream vacation at one of California's 26 ski resorts. </h2>
         </div>
         <div className='home-content-2 position-relative'>
-            <h1 className='text-white'>Just make an account, search for a resort, make a plan, and boom! You're done.</h1>
+            <h1 className='p-5 text-white'>Just make an account, search for a resort, make a plan, and boom! You're done.</h1>
             <h2 className=''></h2>
         </div>
     </div>
