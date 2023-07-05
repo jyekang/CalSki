@@ -4,7 +4,7 @@ const { Plans } = models
 
 const getPlans = async (req, res) => {
     try { const plans = await Plans.find()
-        return res.status(200).json({plans})
+        return res.status(200).json(plans)
     } catch (error) {
         return res.status(500).json({ message: error.message })
         }
@@ -13,7 +13,7 @@ const getPlans = async (req, res) => {
 const getPlanById = async (req, res) => {
     try { const plan = await Plans.findById(req.params.id)
         if (plan) {
-            return res.status(200).json({plan})
+            return res.status(200).json(plan)
         } else {
             return res.status(404).json({ message: 'Plan not found' })
             }
@@ -25,7 +25,7 @@ const getPlanById = async (req, res) => {
 const deletePlan = async (req, res) => {
     try { const plan = await Plans.findByIdAndDelete(req.params.id)
         if (plan) {
-            return res.status(200).json({plan})
+            return res.status(200).json(plan)
         } else {
             return res.status(404).json({ message: 'Plan not found' })
             }
@@ -37,7 +37,7 @@ const deletePlan = async (req, res) => {
  const createPlan = async (req, res) => {
     try { const plan = await Plans.create(req.body)
         await plan.save()
-        return res.status(200).json({plan})
+        return res.status(200).json(plan)
     } catch (error) {
         return res.status(500).json({ message: error.message })
         }
@@ -46,7 +46,7 @@ const deletePlan = async (req, res) => {
 const updatePlan = async (req, res) => {
     try { const plan = await Plans.findByIdAndUpdate(req.params.id, req.body)
         if (plan) {
-            return res.status(200).json({plan})
+            return res.status(200).json(plan)
         } else {
             return res.status(404).json({ message: 'Plan not found' })
             }
