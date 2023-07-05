@@ -54,4 +54,20 @@ const updateUser = async (req, res) => {
             }
 }
 
-export default { getUsers, getUserById, deleteUser, createUser, updateUser }
+
+  const loginUser = async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const user = await Users.findOne({ username, password });
+    if (user) {
+      return res.status(200).json({ message: 'Login successful', user });
+    } else {
+      return res.status(401).json({ message: 'Invalid username or password' });
+    }
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+export default { getUsers, getUserById, deleteUser, createUser, updateUser, loginUser }
