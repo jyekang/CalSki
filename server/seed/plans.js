@@ -8,10 +8,16 @@ const main = async () => {
 
 const plans = [
     {
-        user: "64a2e28922dbf6cf158beb53",
-        resort: "64a2e0a84705f9f6d8539c55",
-        date: "2023-07-03",
+        userName: "XinChen",
+        resortName: "Bear Valley",
+        date: "2023-10-20",
         comment: "Bear Valley seems to be the best place to stay in."
+    },
+    {
+        userName: "EthanFlatt",
+        resortName: "June Mountain",
+        date: '2023-08-05',
+        comment: "I would love to go here."
     }
   ]
   await Plans.deleteMany({})
@@ -24,4 +30,4 @@ const run = async () => {
     db.close()
 }
 
-run()
+run() 

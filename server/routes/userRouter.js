@@ -1,8 +1,10 @@
 import express from 'express';
 import controllers from '../controllers/userController.js';
-const { getUsers, getUserById, createUser, updateUser, deleteUser } = controllers;
+const { getUsers, getUserById, createUser, updateUser, deleteUser, loginUser } = controllers;
 
 const Router = express.Router();
+
+Router.post('/login', loginUser)
 
 Router.get('/', getUsers)
 Router.get('/:id', getUserById)
