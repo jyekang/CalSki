@@ -13,7 +13,7 @@ const ResortsDetail = () => {
       await axios.get(`http://localhost:3001/api/resort/${id}`)
         .then(res => {
           setResort(res.data.resort)
-          setPlan({...plan, resortName: res.data.resort._id})
+          setPlan({...plan, resortName: res.data.resort.resortName})
         })
         .catch(err => console.log(err))
     }
