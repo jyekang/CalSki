@@ -6,14 +6,14 @@ import axios from "axios"
 const ResortsDetail = () => {
   const { id } = useParams()
   const [resort, setResort] = useState({})
-  const [plan, setPlan] = useState({user:'64a2e28922dbf6cf158beb53'})
+  const [plan, setPlan] = useState({userName:'64a2e28922dbf6cf158beb53'})
   const [confirm, setconfirm] = useState('')
   useEffect(() => {
     const getResort = async () => {
       await axios.get(`http://localhost:3001/api/resort/${id}`)
         .then(res => {
           setResort(res.data.resort)
-          setPlan({...plan, resort: res.data.resort._id})
+          setPlan({...plan, resortName: res.data.resort._id})
         })
         .catch(err => console.log(err))
     }
@@ -37,7 +37,7 @@ const ResortsDetail = () => {
       console.log(err)
       setconfirm('Something went wrong, please try again.')
     })
-    setPlan({user:'64a2e28922dbf6cf158beb53', resort: resort._id})
+    setPlan({userName:'64a2e28922dbf6cf158beb53', resortName: resort._id})
   }
 
   return (
