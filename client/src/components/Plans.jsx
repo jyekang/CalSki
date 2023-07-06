@@ -18,18 +18,28 @@ const Plans = () => {
     setPlans({...plans, [e.target.name]: e.target.value})
   }
 
-  console.log(plans)
+const deletePlan = async (plan) => {
+    axios.delete(`http://localhost:3001/api/plan/${plan}`)
+    .then(res => {
+        console.log(res)
+        window.location.reload()
+      })
+    .catch(error => {
+        console.log(error)
+      })
+  }
 
   return (
     
     <div>
       {
     plans.map((plan) => (
-      <div className="card m-5" style={{width: "36rem"}}>
+      <div className="card m-5" style={{width: "36rem"}} key={plan._id}>
         <div className="card-body">
-          <h5 className="card-title">{plan.resortName}<h5>{plan.date}</h5></h5>
+          <h5 className="card-title">{plan.resortName}</h5>
+          <h5>{plan.date}</h5>
           <p className="card-text mt-4">{plan.comment}</p>
-          <button className="btn btn-success me-2" id="updateButton" type="button" data-bs-toggle="modal" data-bs-target="#planModal" data-bs-whatever="@mdo">Update</button><button className="btn btn-danger ms-2" id="deleteButton">Delete</button>
+          <button className="btn btn-success me-2" id="updateButton" type="button" data-bs-toggle="modal" data-bs-target="#planModal" data-bs-whatever="@mdo">Update</button><button className="btn btn-danger ms-2" id="deleteButton" onClick={() => deletePlan(plan._id)}>Delete</button>
         </div>
       </div>
     ))
@@ -76,42 +86,3 @@ const Plans = () => {
 }
 
 export default Plans
-
-
-//   return (
-//     <div className="plansPage">
-//       <h1>Plans</h1>
-//       {
-//         plans.map((plan, key) => (
-//           <div className="container">
-//             <div className="table-responsive">
-//               <table className="table table-hover">
-//                 <thead>
-//                   <tr>
-//                     <th>Resort</th>
-//                     <th>Date</th>
-//                     <th>Plan</th>
-//                     <th>Update and delete</th>
-//                   </tr>
-//                 </thead>
-//                 <tbody>
-//                   <tr>
-//                     <td>Test</td>
-//                     <td>Test</td>
-//                     <td>I want to go here</td>
-//                     <td><button className="btn btn-success" id="updateButton">Update</button><button className="btn btn-danger" id="deleteButton">Delete</button></td>
-//                   </tr>
-//                 </tbody>
-//               </table>
-//             </div>
-//           </div>
-//         ))
-//       }
-//     </div>
-//   ) 
-
-
-// card:
-// <h2>ResortName, - date</h2>
-// <p>plan</p>
-// buttons
