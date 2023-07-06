@@ -142,6 +142,7 @@
 
 .detail-hero-img img {
   border-radius: 15px;
+  width: 60%;
 }
 
 /* .summary .item-card {
@@ -171,5 +172,10 @@
 
   .result-grid {
     grid-gap: 25px;
+  }
+
+  .detail-hero-img img {
+    border-radius: 15px;
+    width: 66%;
   }
 }

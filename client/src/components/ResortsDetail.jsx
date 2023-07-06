@@ -6,20 +6,21 @@ import axios from "axios"
 const ResortsDetail = () => {
   const { id } = useParams()
   const [resort, setResort] = useState({})
-  const [plan, setPlan] = useState({})
+  const [plan, setPlan] = useState({user:'64a2e28922dbf6cf158beb53'})
+  const [confirm, setconfirm] = useState('')
   useEffect(() => {
     const getResort = async () => {
       await axios.get(`http://localhost:3001/api/resort/${id}`)
         .then(res => {
-          console.log(res.data.resort)
           setResort(res.data.resort)
+          setPlan({...plan, resort: res.data.resort._id})
         })
         .catch(err => console.log(err))
     }
     getResort()
   }, [])
 
-  console.log(resort)
+  console.log(plan)
 
   const handleChange = (e) => {
     setPlan({...plan, [e.target.name]: e.target.value})
@@ -27,6 +28,16 @@ const ResortsDetail = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    await axios.post('http://localhost:3001/api/plan', plan)
+    .then(res => {
+      console.log(res)
+      setconfirm(`You have successfully created you plan to ${resort.resortName}!`)
+    })
+    .catch(err => {
+      console.log(err)
+      setconfirm('Something went wrong, please try again.')
+    })
+    setPlan({user:'64a2e28922dbf6cf158beb53', resort: resort._id})
   }
 
   return (
@@ -43,9 +54,9 @@ const ResortsDetail = () => {
           </div>
         </div>
         <div className="detail-hero-img">
-          <img src={resort.image} alt="" className="w-75" />
+          <img src={resort.image} alt="" className="" />
         </div>
-        <button type="button" className="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#planModal" data-bs-whatever="@mdo">Create a Plan</button>
+        <button type="button" className="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#planModal" data-bs-whatever="">Create a Plan</button>
       </div>
 
       <div className="summary m-5">
@@ -85,31 +96,49 @@ const ResortsDetail = () => {
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="planModalLabel">Create Plan</h1>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" className="btn-close" name="" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
               <form className="text-start">
-                <div className="mb-3">
+                {/* <div className="mb-3">
                   <label htmlFor="plan-name" className="col-form-label">Plan Name:</label>
                   <input type="text" className="form-control" id="plan-name" onChange={handleChange}/>
-                </div>
+                </div> */}
                 <div className="mb-3">
                   <label htmlFor="plan-date" className="col-form-label">Date:</label>
-                  <input className="form-control" id="plan-date" onChange={handleChange}></input>
+                  <input className="form-control" type="date" name="date" id="plan-date" onChange={handleChange}></input>
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="plan-note" className="col-form-label">Note:</label>
-                  <input className="form-control" id="plan-note" onChange={handleChange}></input>
+                  <label htmlFor="plan-comment" className="col-form-label">Note:</label>
+                  <input className="form-control" name="comment"  id="plan-comment" onChange={handleChange}></input>
                 </div>
-                <div className="mb-3">
+                {/* <div className="mb-3">
                   <label htmlFor="plan-activity" className="col-form-label">Activity:</label>
                   <input className="form-control" id="plan-activity" onChange={handleChange}></input>
-                </div>
+                </div> */}
               </form>
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" className="btn btn-primary">Create Plan</button>
+              <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal" onClick={handleSubmit}>Create Plan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="modal fade" id="confirmModal" tabIndex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div className="modal-dialog modal-dialog-centered" style={{translate:'0px -5vh'}}>
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="planModalLabel">Create Plan</h1>
+              <button type="button" className="btn-close" name="" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              <p>{confirm}</p>
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" className="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-dismiss="modal">OK</button>
             </div>
           </div>
         </div>
