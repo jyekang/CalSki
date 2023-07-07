@@ -64,8 +64,14 @@
 }
 
 .footer {
+  flex-wrap: wrap;
   height: 50px;
   background-color: whitesmoke;
+}
+
+.footer h6 {
+  display: block;
+  margin: 0;
 }
 
 /* resort result list*/
@@ -215,6 +221,16 @@
   translate: 0 -80px;
 }
 
+.resorts-intro {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+  text-align-last: center;
+  padding-bottom: 50px;
+  padding-top: 40px;
+  font-size: 21px;
+ 
+}
 
 
 @media screen and (max-width: 1000px) {
