@@ -30,6 +30,9 @@ const Nav = () => {
               <li className="nav-item">
               <Link className='nav-link' to='/login' onClick={handleClick}>Login</Link>
               </li>
+              <li className="nav-item">
+              <Link className='nav-link' to='/signup' onClick={handleClick}>Signup</Link>
+              </li>
             </ul>
           </div>
         </div>

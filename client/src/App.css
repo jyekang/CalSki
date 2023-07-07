@@ -173,7 +173,6 @@
 }
 
 
-
 .plans .border-box {
   border: solid 3px white;
   padding: 30px;
@@ -191,6 +190,8 @@
   color: rgb(9, 9, 9);
   font-size: 50px;
 }
+
+
 
 @media screen and (max-width: 1000px) {
 
