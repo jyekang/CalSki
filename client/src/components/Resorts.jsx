@@ -20,12 +20,15 @@ const Resorts = () => {
 
   const handleSearch = async (e) => {
     e.preventDefault()
-    console.log(search)
-    await axios.get(`http://localhost:3001/api/resort/search/${search}`)
+    console.log('hi', search)
+    await axios.get(`http://localhost:3001/api/resort?search=${search}`)
+    .then(res => {
+        console.log(res.data)
+        setResorts(res.data)
+      })
   }
 
   const handleChange = (e) => {
-    console.log(e.target.value)
     setSearch(e.target.value)
   }
 
@@ -51,10 +54,10 @@ const Resorts = () => {
         Check out destination options below. 
         </p>
       </div>
-      {/* <form className='search'>
+      <form className='search'>
         <input type='text' placeholder='Search for a resort' className='search-bar' onChange={handleChange} value={search}/>
         <button type='submit' onClick={handleSearch}>Search</button>
-      </form> */}
+      </form>
       <div className='result-list'>
         <h1>California Ski Resorts</h1>
         <div className='result-grid'>
