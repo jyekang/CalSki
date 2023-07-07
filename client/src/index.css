@@ -35,6 +35,12 @@ body {
   margin: 0;
 }
 
+.resort-detail .contact p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
 .home .text-wrapper {
   width: 70%;
 }

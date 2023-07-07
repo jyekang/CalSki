@@ -36,8 +36,6 @@ const Resorts = () => {
     navigate(e)
   }
 
-  console.log(resorts)
-
   return (
     <div className='resorts'>
       <div className='resorts-intro'>
