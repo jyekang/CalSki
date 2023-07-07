@@ -1,5 +1,11 @@
 import models from '../models/index.js'
 const { Users } = models
+import jwt from 'jsonwebtoken'
+
+
+const createToken = (_id) => {
+    return jwt.sign({ _id }, process.env.SECRET, { expiresIn: '3d' })
+}
 
 const getUsers = async (req, res) => {
     try { const users = await Users.find()
@@ -54,19 +60,23 @@ const updateUser = async (req, res) => {
             }
 }
 
+
+
 //login user
   const loginUser = async (req, res) => {
-  res.json({mssg: "login user"})
+    const {password, email} = req.body
+    
+    try {
+        const user = await Users.login(password, email)
 
-//   try {
-//     const user = await Users.findOne({ username, password });
-//     if (user) {
-//       return res.status(200).json({ message: 'Login successful', user });
-//     } else {
-//       return res.status(401).json({ message: 'Invalid username or password' });
-//     }
-//   } catch (error) {
-//     return res.status(500).json({ message: error.message });
+        //create a token
+        const token = createToken(user._id)
+        
+
+        res.status(200).json({ email, token})
+        } catch (error) {
+        return res.status(400).json({ error: error.message })
+        }
   }
 
 
@@ -76,7 +86,12 @@ const signupUser = async (req, res) => {
     
     try {
         const user = await Users.signup(password, email)
-        res.status(200).json({ password, email})
+
+        //create a token
+        const token = createToken(user._id)
+        
+
+        res.status(200).json({ email, token})
         } catch (error) {
         return res.status(400).json({ error: error.message })
         }

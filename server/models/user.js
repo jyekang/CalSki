@@ -56,4 +56,25 @@ User.statics.signup = async function(password, email) {
     return User;
 };
 
+//static login method
+User.statics.login = async function(password, email) {
+
+   
+    if (!email ||!password) {
+        throw Error("Email and password are required");
+    }
+   
+
+    const user = await this.findOne({ email });
+    if (!user) {
+        throw Error("Incorrect email");
+    }
+    const Match = await bcrypt.compare(password, user.password);
+    if (!Match) {
+        throw Error("Incorrect password");
+    }
+
+    return user;
+};
+
 export default User;
