@@ -24,8 +24,9 @@ const resorts = [
       nearbyResorts: "[Snow Summit Mountain Resort]",
       contactAddress: "56700 Rancheria Rd Wofford Heights, CA 93285",
       contactEmail: "contactus@altasierra.com",
-      contactWebsite: "altasierra.com/v2",
-      coordinates: '35.711162, -118.560221'
+      contactWebsite: "http://altasierra.com/v2",
+      coordinates: '35.711162, -118.560221',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 0}
     },
     {
       resortName: "Bear Valley",
@@ -45,7 +46,8 @@ const resorts = [
       contactAddress: "2280 State Route 207, Bear Valley , CA 95223",
       contactEmail: "fun@bearvalley.com",
       contactWebsite: "http://www.bearvalley.com/",
-      coordinates: '38.492712, -120.044469'
+      coordinates: '38.492712, -120.044469',
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 0}
     },
     {
       resortName: "Big Bear Mountain",
@@ -65,7 +67,8 @@ const resorts = [
       contactAddress: "43101 Goldmine Drive, Big Bear Lake , CA 92305",
       contactEmail: "info@bbmr.com",
       contactWebsite: "http://www.bigbearmountainresorts.com/",
-      coordinates: '34.227912, -116.860829'
+      coordinates: '34.227912, -116.860829',
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "Boreal Mountain Resort",
@@ -84,11 +87,12 @@ const resorts = [
       nearbyResorts: "[Alpine Meadows, Donner Ski Ranch, Homewood Mountain Resort, Northstar-at-Tahoe, Soda Springs, Squaw Valley, Sugar Bowl, Tahoe Donner]",
       contactAddress: "19749 Boreal Ridge Road, Soda Springs , CA 95728",
       contactEmail: "borealinfo@borealski.com",
-      contactWebsite: "http://www.skiboreal.com/winter/index.html",
-      coordinates: '39.333566, -120.354952'
+      contactWebsite: "http://www.skiboreal.com",
+      coordinates: '39.333566, -120.354952',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 0, 'snowboardLessons': 0, 'equipmentRentals': 0, 'adaptiveProgram': 0}
     },
     {
-      resortName: "Buckhorn Ski/Snowboard Club",
+      resortName: "Buckhorn Ski/snowboardClub",
       region: "Southern California",
       image: "https://files.skimap.org/mksir7eib3gn3e287pn8meuqezpn",
       description: "Buckhorn is a backcountry resort for skiers, snowboarders and cross country skiers. It is a non-profit club operating in the San Gaberial Mountains, California. Members have all year access to the throwback to the 50's lodge which sleeps up to 40 people.",
@@ -105,7 +109,8 @@ const resorts = [
       contactAddress: "58.33 mile marker Angeles National Forest, Angeles Crest Hwy, Pearblossom, CA 93553",
       contactEmail: "contact@buckhornlodge.org",
       contactWebsite: "https://www.buckhornlodge.org/",
-      coordinates: '34.342044, -117.919723'
+      coordinates: '34.342044, -117.919723',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 0, 'snowboardLessons': 0, 'equipmentRentals': 0, 'adaptiveProgram': 0}
     },
     {
       resortName: "China Peak",
@@ -125,7 +130,8 @@ const resorts = [
       contactAddress: "59265 Highway 168, Lakeshore , CA 93634",
       contactEmail: "info@skichinapeak.com",
       contactWebsite: "http://www.skichinapeak.com/",
-      coordinates: '37.236329, -119.157175'
+      coordinates: '37.236329, -119.157175',
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "Dodge Ridge",
@@ -145,7 +151,8 @@ const resorts = [
       contactAddress: "1 Dodge Ridge Road, Pinecrest , CA 95364",
       contactEmail: "info@dodgeridge.com",
       contactWebsite: "http://www.dodgeridge.com/",
-      coordinates: '38.189968, -119.956095'
+      coordinates: '38.189968, -119.956095',
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "Donner Ski Ranch",
@@ -165,7 +172,8 @@ const resorts = [
       contactAddress: "19320 Donner Pass Road, Norden , CA 95724",
       contactEmail: "dsrinfo@donnerskiranch.com",
       contactWebsite: "http://www.donnerskiranch.com/",
-      coordinates: '39.318210, -120.329862'
+      coordinates: '39.318210, -120.329862',
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "Heavenly",
@@ -185,7 +193,8 @@ const resorts = [
       contactAddress: "3860 Saddle Road, South Lake Tahoe , CA 96150",
       contactEmail: "Heavenlyinfo@vailresorts..com",
       contactWebsite: "http://www.skiheavenly.com/",
-      coordinates: '38.937022, -119.938505'
+      coordinates: '38.937022, -119.938505',
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "Homewood Mountain resort",
@@ -205,7 +214,8 @@ const resorts = [
       contactAddress: "5145 Westlake Blvd, Homewood , CA 96141",
       contactEmail: "guestservices@skihomewood.com",
       contactWebsite: "http://www.skihomewood.com/",
-      coordinates: '39.085653, -120.160249'
+      coordinates: '39.085653, -120.160249',
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "June Mountain",
@@ -225,7 +235,8 @@ const resorts = [
       contactAddress: "3819 Hwy 158, June Lake , CA 93529",
       contactEmail: "aross@mammothresorts.com",
       contactWebsite: "http://www.junemountain.com/",
-      coordinates: '37.767567, -119.090751'
+      coordinates: '37.767567, -119.090751',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Kirkwood Ski Resort",
@@ -245,7 +256,8 @@ const resorts = [
       contactAddress: "1501 Kirkwood Meadows Drive, Kirkwood , CA 95646",
       contactEmail: "info@kirkwood.com",
       contactWebsite: "http://www.kirkwood.com/",
-      coordinates: '38.684348, -120.065448'
+      coordinates: '38.684348, -120.065448',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Mammoth",
@@ -265,7 +277,8 @@ const resorts = [
       contactAddress: "10001 Minaret Road, Mammoth Lakes , CA 93546",
       contactEmail: "800MAMMOTH@mammothresorts.com",
       contactWebsite: "http://www.mammothmountain.com/",
-      coordinates: '37.651216, -119.036948'
+      coordinates: '37.651216, -119.036948',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Mount Baldy",
@@ -285,7 +298,8 @@ const resorts = [
       contactAddress: "Mt Baldy Road, Mt Baldy , CA 91759",
       contactEmail: "contactus@mtbaldy.com",
       contactWebsite: "http://mtbaldyskilifts.com/",
-      coordinates: '34.237796, -117.657823'
+      coordinates: '34.237796, -117.657823',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Mount Shasta",
@@ -305,13 +319,14 @@ const resorts = [
       contactAddress: "4500 Ski Park Hwy, McCloud , CA 96057",
       contactEmail: "thinksnow@skipark.com",
       contactWebsite: "https://www.skipark.com/",
-      coordinates: '41.320922, -122.203831'
+      coordinates: '41.320922, -122.203831',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Mount Waterman",
       region: "Southern Califonia",
       image: "https://www.gieszl.com/snow/mtwaterman/img/waterman_map.jpg",
-      description: "Mt. Waterman is a day ski and snowboard area close to the Los Angeles basin.",
+      description: "Mt. Waterman is a day ski and snowboardarea close to the Los Angeles basin.",
       verticalRise: 1030,
       baseElevation: 7000,
       summitElevation: 8030,
@@ -325,7 +340,8 @@ const resorts = [
       contactAddress: "CA-2, La Canada Flintridge, CA 93553",
       contactEmail: "mtwaterman@outlook.com",
       contactWebsite: "http://www.mtwaterman.org/",
-      coordinates: '34.349542, -117.928732'
+      coordinates: '34.349542, -117.928732',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Mountain High Ski Area",
@@ -345,7 +361,8 @@ const resorts = [
       contactAddress: "24510 Highway 2, Wrightwood , CA 92397",
       contactEmail: "john@mthigh.com",
       contactWebsite: "http://www.mthigh.com/",
-      coordinates: '34.377067, -117.691463'
+      coordinates: '34.377067, -117.691463',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Northstar-at-Tahoe",
@@ -365,7 +382,8 @@ const resorts = [
       contactAddress: "100 Northstar Drive, Truckee , CA 96161",
       contactEmail: "northstar@vailresorts.com",
       contactWebsite: "http://www.northstarattahoe.com/",
-      coordinates: '39.287085, -120.104330'
+      coordinates: '39.287085, -120.104330',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Palisades Tahoe",
@@ -385,7 +403,8 @@ const resorts = [
       contactAddress: "1960 Squaw Valley Road, Olympic Valley , CA 96146",
       contactEmail: "info@palisadestahoe.com",
       contactWebsite: "http://squawalpine.com/",
-      coordinates: '39.197240, -120.235679'
+      coordinates: '39.197240, -120.235679',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Sierra at Tahoe",
@@ -405,13 +424,14 @@ const resorts = [
       contactAddress: "1111 Sierra at Tahoe Road, Twin Bridges , CA 95735",
       contactEmail: "sierra@sierraattahoe.com",
       contactWebsite: "http://www.sierraattahoe.com/",
-      coordinates: '38.800822, -120.082845'
+      coordinates: '38.800822, -120.082845',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Snow Summit Mountain Resort",
       region: "Southern California",
       image: "https://files.skimap.org/yjgh28cfisbwzibz92ay9koartaa.jpg",
-      description: "Snow Summit's offers a wide variety of interconnecting runs for all ski levels. Located at Big Bear Lake, California. Check out videos, live web cams and pics of the day.",
+      description: "Snow Summit's offers a wide variety of interconnecting runs for all skilevels. Located at Big Bear Lake, California. Check out videos, live web cams and pics of the day.",
       verticalRise: 1200,
       baseElevation: 7000,
       summitElevation: 8200,
@@ -425,7 +445,8 @@ const resorts = [
       contactAddress: "880 Summit Blvd, Big Bear Lake , CA 92315",
       contactEmail: "info@bbmr.com",
       contactWebsite: "http://www.snowsummit.com/",
-      coordinates: '34.236134, -116.888826'
+      coordinates: '34.236134, -116.888826',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Snow Valley",
@@ -444,8 +465,9 @@ const resorts = [
       nearbyResorts: "[Big Bear Mountain, Mountain High Ski Area, Snow Summit Mountain Resort]",
       contactAddress: "35100 Highway 18, 5 miles east of Running Springs, Running Springs , CA 92382",
       contactEmail: "svinfo@snow-valley.com",
-      contactWebsite: "http://www.snow-valley.com/index_english.html",
-      coordinates: '34.225017, -117.036239'
+      contactWebsite: "http://www.snow-valley.com",
+      coordinates: '34.225017, -117.036239',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Soda Spring",
@@ -465,7 +487,8 @@ const resorts = [
       contactAddress: "10244 Soda Springs Road, Soda Springs , CA 95728",
       contactEmail: "info@skisodasprings.com",
       contactWebsite: "http://www.skisodasprings.com/",
-      coordinates: '39.319944, -120.379294'
+      coordinates: '39.319944, -120.379294',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Sugar Bowl",
@@ -485,7 +508,8 @@ const resorts = [
       contactAddress: "629 Sugar Bowl Road, Norden , CA 95724",
       contactEmail: "info@sugarbowl.com",
       contactWebsite: "http://www.skisugarbowl.com/",
-      coordinates: '39.303085, -120.337371'
+      coordinates: '39.303085, -120.337371',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Tahoe Donner",
@@ -505,13 +529,14 @@ const resorts = [
       contactAddress: "11603 Snowpeak Way, Truckee , CA 96161",
       contactEmail: "ski@tahoedonner.com",
       contactWebsite: "http://www.tahoedonner.com/",
-      coordinates: '39.354535, -120.259242'
+      coordinates: '39.354535, -120.259242',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
-      resortName: "Yosemite Ski & Snowboard Area",
+      resortName: "Yosemite Ski & snowboardArea",
       region: "Central California",
       image: "https://i.imgur.com/koOY7Ar.png",
-      description: "California's original ski area, Yosemite Ski & Snowboard Area (previously known as Badger Pass), is a full-service ski resort offering ski and snowboard instruction, rental equipment, a ski shop, childcare, and a cafeteria and lounge. 85 percent of the slopes are devoted to beginner and intermediate levels. Guided backcountry ski tours through Yosemite are available.",
+      description: "California's original ski area, Yosemite Ski & snowboardArea (previously known as Badger Pass), is a full-service ski resort offering ski and snowboardinstruction, rental equipment, a ski shop, childcare, and a cafeteria and lounge. 85 percent of the slopes are devoted to beginner and intermediate levels. Guided backcountry ski tours through Yosemite are available.",
       verticalRise: 800,
       baseElevation: 7200,
       summitElevation: 8000,
@@ -524,8 +549,9 @@ const resorts = [
       nearbyResorts: "",
       contactAddress: "Glacier Point Road, Yosemite National Park , CA 95389",
       contactEmail: "smayer@delawarenorth.com",
-      contactWebsite: "http://www.travelyosemite.com/winter/yosemite-ski-snowboard-area/",
-      coordiantes: '37.662454, -119.663278'
+      contactWebsite: "http://www.travelyosemite.com",
+      coordiantes: '37.662454, -119.663278',
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     }
   ]
   await Resorts.deleteMany({})
