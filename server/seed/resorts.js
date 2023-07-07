@@ -362,7 +362,7 @@ const resorts = [
       contactEmail: "john@mthigh.com",
       contactWebsite: "http://www.mthigh.com/",
       coordinates: '34.377067, -117.691463',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 1, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "Northstar-at-Tahoe",
@@ -383,7 +383,7 @@ const resorts = [
       contactEmail: "northstar@vailresorts.com",
       contactWebsite: "http://www.northstarattahoe.com/",
       coordinates: '39.287085, -120.104330',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "Palisades Tahoe",
@@ -404,7 +404,7 @@ const resorts = [
       contactEmail: "info@palisadestahoe.com",
       contactWebsite: "http://squawalpine.com/",
       coordinates: '39.197240, -120.235679',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 1, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "Sierra at Tahoe",
@@ -425,7 +425,7 @@ const resorts = [
       contactEmail: "sierra@sierraattahoe.com",
       contactWebsite: "http://www.sierraattahoe.com/",
       coordinates: '38.800822, -120.082845',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "Snow Summit Mountain Resort",
@@ -446,7 +446,7 @@ const resorts = [
       contactEmail: "info@bbmr.com",
       contactWebsite: "http://www.snowsummit.com/",
       coordinates: '34.236134, -116.888826',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 0}
     },
     {
       resortName: "Snow Valley",
@@ -467,7 +467,7 @@ const resorts = [
       contactEmail: "svinfo@snow-valley.com",
       contactWebsite: "http://www.snow-valley.com",
       coordinates: '34.225017, -117.036239',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "Soda Spring",
@@ -488,7 +488,7 @@ const resorts = [
       contactEmail: "info@skisodasprings.com",
       contactWebsite: "http://www.skisodasprings.com/",
       coordinates: '39.319944, -120.379294',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 0}
     },
     {
       resortName: "Sugar Bowl",
@@ -509,7 +509,7 @@ const resorts = [
       contactEmail: "info@sugarbowl.com",
       contactWebsite: "http://www.skisugarbowl.com/",
       coordinates: '39.303085, -120.337371',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 0}
     },
     {
       resortName: "Tahoe Donner",
@@ -530,10 +530,10 @@ const resorts = [
       contactEmail: "ski@tahoedonner.com",
       contactWebsite: "http://www.tahoedonner.com/",
       coordinates: '39.354535, -120.259242',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 0}
     },
     {
-      resortName: "Yosemite Ski & snowboardArea",
+      resortName: "Yosemite Ski & Snowboard Area",
       region: "Central California",
       image: "https://i.imgur.com/koOY7Ar.png",
       description: "California's original ski area, Yosemite Ski & snowboardArea (previously known as Badger Pass), is a full-service ski resort offering ski and snowboardinstruction, rental equipment, a ski shop, childcare, and a cafeteria and lounge. 85 percent of the slopes are devoted to beginner and intermediate levels. Guided backcountry ski tours through Yosemite are available.",
@@ -551,7 +551,7 @@ const resorts = [
       contactEmail: "smayer@delawarenorth.com",
       contactWebsite: "http://www.travelyosemite.com",
       coordiantes: '37.662454, -119.663278',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 0}
     }
   ]
   await Resorts.deleteMany({})
