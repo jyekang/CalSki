@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react'
-import { useSignup } from '../hooks/useSignup'
+// import { useSignup } from '../hooks/useSignup'
 import UserContext from '../context/UserContext'
 
 const Signup = () => {
@@ -7,7 +7,7 @@ const Signup = () => {
     // const [password, setPassword] = useState('')
     const { loggedInUser, setLoggedInUser } = useContext(UserContext)
     const [user, setUser] = useState({})
-    const { signup, error, isLoading } = useSignup()
+    // const { signup, error, isLoading } = useSignup()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
