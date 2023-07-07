@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { userContext } from '../hooks/userContext.jsx';
+// import { userContext } from '../hooks/userContext.jsx';
 
 export const useLogin = () => {
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(null);
-    const { dispatch } = useAuthContext();
+    // const { dispatch } = useAuthContext();
 
     const login = async (email, password) => {
         setIsLoading(true);
