@@ -49,10 +49,9 @@ const Plans = () => {
 
     
     <div className='plans'>
+      <h1 className='plans-h1'>Plan Your Winter Getaway</h1>
       <div className='result-list'>
-        <h1 className='plans-h1'>Plan Your Winter Getaway</h1>
         <div className='result-grid'>
-          
           {
             plans.map((plan) => (
               <div className="item-card" key={plan._id}>
