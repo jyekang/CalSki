@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useAuthContext } from "../context/authContext";
+import { useAuthContext } from "./context/authContext.jsx";
 
 export const useSignup = () => {
     const [error, setError] = useState(null);
@@ -30,4 +30,6 @@ export const useSignup = () => {
             setIsLoading(false);
         }
 }
+
+    return { signup, isLoading, error };
 }
