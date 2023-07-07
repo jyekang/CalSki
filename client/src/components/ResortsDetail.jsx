@@ -27,7 +27,7 @@ const ResortsDetail = () => {
     getResort()
   }, [])
 
-  console.log(programs.kidsProgram)
+  console.log('kids',programs.kidsProgram,'women',programs.womensProgram)
 
   const gotoWeb = () => {
     window.open(`www.google.com`, '_blank')
@@ -78,7 +78,7 @@ const ResortsDetail = () => {
             {/* Ticket */}
             <div className="result-item ticket">
               <div className="item-card p-3 px-4 text-start" style={{ height: '' }}>
-                <h5 className="fw-bold lh-lg">Ticket Prices:</h5>
+                <h5 className="fw-bold lh-lg"><i class="bi bi-ticket-detailed"></i> Ticket Prices:</h5>
                 <p>Child: <span className="float-end">{resort.ticketChild ? `$ ${resort.ticketChild}` : 'N/A'}</span> </p>
                 <p>Youth: <span className="float-end">{resort.ticketYouth ? `$ ${resort.ticketYouth}` : 'N/A'}</span></p>
                 <p>Adult: <span className="float-end">{resort.ticketAdult ? `$ ${resort.ticketAdult}` : 'N/A'}</span></p>
@@ -89,7 +89,7 @@ const ResortsDetail = () => {
             {/* Statistics */}
             <div className="result-item statistics">
               <div className="item-card p-3 px-4 text-start" style={{ height: '' }}>
-                <h5 className="fw-bold lh-lg">Statistics:</h5>
+                <h5 className="fw-bold lh-lg"><i class="bi bi-bar-chart-line"></i> Statistics:</h5>
                 <p className="">Base Elevation: <span className="float-end">{resort.baseElevation} feet</span></p>
                 <p>Summit Elevation: <span className="float-end">{resort.summitElevation} feet</span></p>
                 <p>Vertical Rise: <span className="float-end">{resort.verticalRise} feet</span></p>
@@ -101,26 +101,26 @@ const ResortsDetail = () => {
             {/* Programs */}
             <div className="result-item programs">
               <div className="item-card p-3 px-4 text-start" style={{ height: '' }}>
-                <h5 className="fw-bold lh-lg">Programs:</h5>
+                <h5 className="fw-bold lh-lg"><i class="bi bi-card-checklist"></i> Programs:</h5>
                 <p className="">
                   Kids Program:
-                  <span className="float-end">{programs.kidsProgram ? <i className="bi bi-x-circle-fill"></i> : <i className="bi bi-check-circle-fill text-success"></i>}</span>
+                  <span className="float-end">{programs.kidsProgram ? <i className="bi bi-check-circle-fill text-success"></i> : <i className="bi bi-x-circle-fill"></i>}</span>
                 </p>
                 <p className="">
                   Womens Program:
-                  <span className="float-end">{programs.womensProgram ? <i className="bi bi-x-circle-fill"></i> : <i className="bi bi-check-circle-fill text-success"></i>}</span>
+                  <span className="float-end">{programs.womensProgram ? <i className="bi bi-check-circle-fill text-success"></i> : <i className="bi bi-x-circle-fill"></i>}</span>
                 </p>
                 <p className="">
                   Ski Lessons:
-                  <span className="float-end">{programs.skiLesson ? <i className="bi bi-x-circle-fill"></i> : <i className="bi bi-check-circle-fill text-success"></i>}</span>
+                  <span className="float-end">{programs.skiLessons ? <i className="bi bi-check-circle-fill text-success"></i> : <i className="bi bi-x-circle-fill"></i>}</span>
                 </p>
                 <p className="">
                   Snowboard Lessons:
-                  <span className="float-end">{programs.snowboardLesson ? <i className="bi bi-x-circle-fill"></i> : <i className="bi bi-check-circle-fill text-success"></i>}</span>
+                  <span className="float-end">{programs.snowboardLessons ? <i className="bi bi-check-circle-fill text-success"></i> : <i className="bi bi-x-circle-fill"></i>}</span>
                 </p>
                 <p className="">
                   Equipment Rentals:
-                  <span className="float-end">{programs.equipmentRental ? <i className="bi bi-x-circle-fill"></i> : <i className="bi bi-check-circle-fill text-success"></i>}</span>
+                  <span className="float-end">{programs.equipmentRentals ? <i className="bi bi-check-circle-fill text-success"></i> : <i className="bi bi-x-circle-fill"></i>}</span>
                 </p>
               </div>
             </div>
@@ -128,7 +128,7 @@ const ResortsDetail = () => {
             {/* Contact */}
             <div className="result-item contact">
               <div className="item-card contact p-3 px-4 text-start" style={{ height: '' }}>
-                <h5 className="fw-bold lh-lg">Contacts:</h5>
+                <h5 className="fw-bold lh-lg"><i class="bi bi-person-lines-fill"></i> Contacts:</h5>
                 <p className="">Address: <br /> <span className="">{resort.contactAddress}</span></p>
                 <p>Email: <br /> <span className="">{resort.contactEmail}</span></p>
                 <p>Website: <br /> <a className="" href={`${resort.contactWebsite}`} target="_blank">{resort.contactWebsite}</a></p>
