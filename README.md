@@ -2,9 +2,9 @@
 
 This app was developed by Xin Chen, Janice Kang, and Ethan Flatt.
 
-[Xin Chen's GitHub](https://github.com/chrischen96)
-[Janice Kang's GitHub](https://github.com/jyekang)
-[Ethan Flatt's GitHub](https://github.com/EthanFlatt)
+- [Xin Chen's GitHub](https://github.com/chrischen96)
+- [Janice Kang's GitHub](https://github.com/jyekang)
+- [Ethan Flatt's GitHub](https://github.com/EthanFlatt)
 
 ## Description
 
@@ -14,7 +14,7 @@ This is a full-stack MERN application with full CRUD on the front and back-end, 
 
 [Check out our entity relationship diagram and component hierarchy diagram here](https://lucid.app/lucidchart/163a26ae-fc9d-450a-8723-3ab8b969b676/edit?viewport_loc=-507%2C-538%2C4664%2C2152%2C0_0&invitationId=inv_056889d0-d422-4afc-b6fc-23cc3f259c16)
 
-[](/calski.png)
+[test](/calski.png)
 
 ## Trello board 
 
