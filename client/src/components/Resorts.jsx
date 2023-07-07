@@ -33,8 +33,6 @@ const Resorts = () => {
     navigate(e)
   }
 
-  console.log(resorts)
-
   return (
     <div className='resorts'>
       {/* <form className='search'>
