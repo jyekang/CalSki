@@ -3,13 +3,12 @@ import { Link } from "react-router-dom"
 const Home = () => {
   return (
     <div className='home'>
-      <div className='home-content-1 d-flex justify-content-end'>
-        <div className="text-wrapper d-flex flex-column">
+      <div className='home-content-1 d-flex'>
+        <div className="text-wrapper d-flex flex-column align-items-center">
           <h1 className='text-white'>Welcome to CalSki!</h1>
-          <h3 className='text-white p-4 pt-0 lh-base'>We provide everything you should know to plan your perfect trip to one of the 26 world-renowned ski resorts in California.</h3>
+          <h3 className='text-white p-5 pt-0 lh-base'>We provide everything you should know to plan your perfect trip to one of the 26 world-renowned ski resorts in California.</h3>
           <h3 className="text-white fs-5"><Link to='/resorts' className='text-white icon-link link-offset-1 link-underline-light link-underline-opacity-0 link-underline-opacity-100-hover'>Find a Resort<i className="bi bi-chevron-right"></i></Link></h3>
         </div>
-
       </div>
       <div className='home-content-2 d-flex flex-column'>
         <h1 className='text-white fs-1'>Personalize your Experience</h1>

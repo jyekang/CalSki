@@ -76,7 +76,7 @@ const Plans = () => {
         <div className="modal-dialog modal-dialog-centered" style={{ translate: '0px -5vh' }}>
           <div className="modal-content">
             <div className="modal-header">
-              <h1 className="modal-title fs-5" id="planModalLabel">Create Plan</h1>
+              <h1 className="modal-title fs-5" id="planModalLabel">Edit Plan</h1>
               <button type="button" className="btn-close" name="" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">

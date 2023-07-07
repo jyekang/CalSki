@@ -9,6 +9,7 @@ const ResortsDetail = () => {
   const [plan, setPlan] = useState({ userName: '64a2e28922dbf6cf158beb53' })
   const [confirm, setconfirm] = useState('')
   const [fatmap, setFatmap] = useState('')
+  const [programs, setPrograms] = useState({})
 
   useEffect(() => {
     const getResort = async () => {
@@ -19,13 +20,15 @@ const ResortsDetail = () => {
           setPlan({ ...plan, resortName: res.data.resort.resortName })
           const map = res.data.resort.coordinates.replace(/ /g, '')
           setFatmap(map)
+          setPrograms(res.data.resort.programs)
         })
         .catch(err => console.log(err))
     }
     getResort()
   }, [])
 
-  console.log(resort.contactWebsite)
+  console.log(programs.kidsProgram)
+
   const gotoWeb = () => {
     window.open(`www.google.com`, '_blank')
   }
@@ -73,38 +76,57 @@ const ResortsDetail = () => {
           <div className="result-grid mb-5">
 
             {/* Ticket */}
-            <div className="result-item">
+            <div className="result-item ticket">
               <div className="item-card p-3 px-4 text-start" style={{ height: '' }}>
-                <h5 className="fw-bold lh-lg">Tickets:</h5>
-                <h6>Child Price: <span className="float-end">$ {resort.ticketChild}</span> </h6>
-                {/* <h6>Young Price: {resort.ticketYoung}</h6> */}
-                <h6>Adult Price: <span className="float-end">$ {resort.ticketAdult}</span></h6>
-                <h6>Senior Price: <span className="float-end">$ {resort.ticketSenior}</span></h6>
+                <h5 className="fw-bold lh-lg">Ticket Prices:</h5>
+                <p>Child: <span className="float-end">{resort.ticketChild ? `$ ${resort.ticketChild}` : 'N/A'}</span> </p>
+                <p>Youth: <span className="float-end">{resort.ticketYouth ? `$ ${resort.ticketYouth}` : 'N/A'}</span></p>
+                <p>Adult: <span className="float-end">{resort.ticketAdult ? `$ ${resort.ticketAdult}` : 'N/A'}</span></p>
+                <p>Senior: <span className="float-end">{resort.ticketSenior ? `$ ${resort.ticketSenior}` : 'N/A'}</span></p>
               </div>
             </div>
 
-            {/* Elevation */}
-            <div className="result-item">
+            {/* Statistics */}
+            <div className="result-item statistics">
               <div className="item-card p-3 px-4 text-start" style={{ height: '' }}>
-                <h5 className="fw-bold lh-lg">Elevation:</h5>
-                <h6 className="">Base Elevation: <span className="float-end">{resort.baseElevation} feet</span></h6>
-                <h6>Summit Elevation: <span className="float-end">{resort.summitElevation} feet</span></h6>
-                <h6>Vertical Rise: <span className="float-end">{resort.verticalRise} feet</span></h6>
+                <h5 className="fw-bold lh-lg">Statistics:</h5>
+                <p className="">Base Elevation: <span className="float-end">{resort.baseElevation} feet</span></p>
+                <p>Summit Elevation: <span className="float-end">{resort.summitElevation} feet</span></p>
+                <p>Vertical Rise: <span className="float-end">{resort.verticalRise} feet</span></p>
+                <p>Number of Trails: <span className="float-end">{resort.numberOfTrails}</span></p>
+                <p>Number of Lifts: <span className="float-end">{resort.numberOfLifts}</span></p>
               </div>
             </div>
 
-            {/* Program */}
-            <div className="result-item">
+            {/* Programs */}
+            <div className="result-item programs">
               <div className="item-card p-3 px-4 text-start" style={{ height: '' }}>
                 <h5 className="fw-bold lh-lg">Programs:</h5>
-                <h6 className="">Kids Program: <span className="float-end">{resort.baseElevation} feet</span></h6>
-                <h6>Equipment Rental: <span className="float-end">{resort.summitElevation} feet</span></h6>
-                <h6>Women Program: <span className="float-end">{resort.verticalRise} feet</span></h6>
+                <p className="">
+                  Kids Program:
+                  <span className="float-end">{programs.kidsProgram ? <i className="bi bi-x-circle-fill"></i> : <i className="bi bi-check-circle-fill text-success"></i>}</span>
+                </p>
+                <p className="">
+                  Womens Program:
+                  <span className="float-end">{programs.womensProgram ? <i className="bi bi-x-circle-fill"></i> : <i className="bi bi-check-circle-fill text-success"></i>}</span>
+                </p>
+                <p className="">
+                  Ski Lessons:
+                  <span className="float-end">{programs.skiLesson ? <i className="bi bi-x-circle-fill"></i> : <i className="bi bi-check-circle-fill text-success"></i>}</span>
+                </p>
+                <p className="">
+                  Snowboard Lessons:
+                  <span className="float-end">{programs.snowboardLesson ? <i className="bi bi-x-circle-fill"></i> : <i className="bi bi-check-circle-fill text-success"></i>}</span>
+                </p>
+                <p className="">
+                  Equipment Rentals:
+                  <span className="float-end">{programs.equipmentRental ? <i className="bi bi-x-circle-fill"></i> : <i className="bi bi-check-circle-fill text-success"></i>}</span>
+                </p>
               </div>
             </div>
 
             {/* Contact */}
-            <div className="result-item">
+            <div className="result-item contact">
               <div className="item-card contact p-3 px-4 text-start" style={{ height: '' }}>
                 <h5 className="fw-bold lh-lg">Contacts:</h5>
                 <p className="">Address: <br /> <span className="">{resort.contactAddress}</span></p>

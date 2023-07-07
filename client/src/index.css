@@ -35,14 +35,15 @@ body {
   margin: 0;
 }
 
-.resort-detail .contact p {
-  font-size: 12px;
-  line-height: 1.5;
-  margin-bottom: 1em;
+.statistics p {
+  font-size: 14px;
+  margin-bottom: 0.8em;
 }
 
-.home .text-wrapper {
-  width: 70%;
+.contact p {
+  font-size: 14px;
+  line-height: 1.6em;
+  margin-bottom: 14px;
 }
 
 @media screen and (max-width: 500px) {
