@@ -20,7 +20,7 @@ const getResorts = async (req, res) => {
 
 const createResort = async (req, res) => {
     try {
-        const resort = await new Resorts(req.body)
+        const resort = new Resorts(req.body)
         await resort.save()
         return res.status(200).json({ resort })
     } catch (error) {

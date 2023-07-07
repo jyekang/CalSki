@@ -19,10 +19,8 @@ const Resort = new Schema (
         contactAddress: { type: String, required: true },
         contactEmail: { type: String, required: true },
         contactWebsite: { type: String, required: true },
-        coordinates: { type: String }
-
-
-        
+        coordinates: { type: String },
+        programs: { type: Object },
     },
     { timestamps: true }
 )
