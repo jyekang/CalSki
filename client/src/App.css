@@ -12,6 +12,8 @@
   will-change: filter;
 }
 
+
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -80,6 +82,10 @@
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
+
+.item-card:hover {
+  box-shadow: 12px 12px 12px rgb(113, 177, 245);
 }
 
 .item-img {
@@ -151,11 +157,39 @@
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
 } */
 
+
 /* plans */
 .plans .button-wrapper button {
   width: 75px;
   border: 1px solid rgb(200, 200, 200);
   box-shadow: 0px 0px 1px rgb(205, 205, 205);
+}
+
+.plans {
+  
+  border: solid 10px rgb(58, 117, 175);
+  border-radius: 20px;
+  padding: 50px auto 50px auto;
+}
+
+
+
+.plans .border-box {
+  border: solid 3px white;
+  padding: 30px;
+}
+
+.item-card
+ {
+  margin: 100px auto;
+  
+  background-color: white;
+}
+
+.plans-h1 {
+  padding: 30px 0px;
+  color: rgb(9, 9, 9);
+  font-size: 50px;
 }
 
 @media screen and (max-width: 1000px) {
