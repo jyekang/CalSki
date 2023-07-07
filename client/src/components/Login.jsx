@@ -1,15 +1,18 @@
 import { useState, useContext } from 'react'
 import UserContext from '../context/UserContext'
+import {useLogin} from '../hooks/useLogin'
 
 const Login = () => {
     // const [email, setEmail] = useState('')
     // const [password, setPassword] = useState('')
     const { loggedInUser, setLoggedInUser } = useContext(UserContext)
     const [user, setUser] = useState({})
+    const { login, error, isLoading } = useLogin()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(user.email, user.password)
+       
+        await login(email, password)
         // if email and password match the db, setLoggedInUser to the user
         
         // if not, alert the user that the email and password do not match
@@ -47,7 +50,8 @@ const Login = () => {
                     />
                 </div>
 
-                <button>Login</button>
+                <button disabled={isLoading}>Login</button>
+                {error && <div className='error'>{error}</div> }
             </form>
         </div>
 
