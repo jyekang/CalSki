@@ -182,16 +182,14 @@
   padding: 50px auto 50px auto;
 }
 
-.plans .border-box {
-  border: solid 3px white;
-  padding: 30px;
-}
 
 .plans-h1 {
   padding: 30px 0px;
   color: rgb(9, 9, 9);
   font-size: 50px;
 }
+
+
 
 @media screen and (max-width: 1000px) {
 
