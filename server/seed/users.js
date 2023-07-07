@@ -8,13 +8,13 @@ const main = async () => {
 
 const users = [
     {
-        username: "XinChen",
+        
         password: "Xin12345",
         email: "xinchen@gmail.com",
         favResorts: []
     },
     {
-        username: "EthanFlatt",
+        
         password: "Ethan1234",
         email: "ethanflatt@gmail.com",
         favResorts: []

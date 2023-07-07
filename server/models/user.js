@@ -1,13 +1,14 @@
 import { Schema } from "mongoose";
 import bcrypt from "bcrypt";
+import validator from "validator";
 
 const User = new Schema(
     {
-        username: {
-            type: String,
-            // required: true,
-            unique: true
-        },
+        // username: {
+        //     type: String,
+        //     // required: true,
+        //     unique: true
+        // },
         password: {
             type: String,
             required: true,
@@ -30,7 +31,19 @@ const User = new Schema(
 );
 
 //static signup method
-User.statics.signup = async function(username, password, email) {
+User.statics.signup = async function(password, email) {
+
+    //validation
+    if (!email || !password) {
+        throw Error("Email and password are required");
+    }
+    if (!validator.isEmail(email)) {
+        throw Error("Email is invalid");
+        }
+    if (!validator.isStrongPassword(password)) {
+        throw Error("Password not strong enough");
+    }
+
     const exists = await this.findOne({ email });
     if (exists) {
         throw new Error("Email already exists");
@@ -38,7 +51,7 @@ User.statics.signup = async function(username, password, email) {
     const salt = await bcrypt.genSalt(10);
     const hashed = await bcrypt.hash(password, salt);
 
-    const User = await this.create({ email, username, password: hashed });
+    const User = await this.create({ email, password: hashed });
 
     return User;
 };
