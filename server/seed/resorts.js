@@ -173,7 +173,7 @@ const resorts = [
       contactEmail: "dsrinfo@donnerskiranch.com",
       contactWebsite: "http://www.donnerskiranch.com/",
       coordinates: '39.318210, -120.329862',
-      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 0}
     },
     {
       resortName: "Heavenly",
@@ -194,7 +194,7 @@ const resorts = [
       contactEmail: "Heavenlyinfo@vailresorts..com",
       contactWebsite: "http://www.skiheavenly.com/",
       coordinates: '38.937022, -119.938505',
-      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 1, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "Homewood Mountain resort",
@@ -215,7 +215,7 @@ const resorts = [
       contactEmail: "guestservices@skihomewood.com",
       contactWebsite: "http://www.skihomewood.com/",
       coordinates: '39.085653, -120.160249',
-      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 1, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 0}
     },
     {
       resortName: "June Mountain",
@@ -236,7 +236,7 @@ const resorts = [
       contactEmail: "aross@mammothresorts.com",
       contactWebsite: "http://www.junemountain.com/",
       coordinates: '37.767567, -119.090751',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 0}
     },
     {
       resortName: "Kirkwood Ski Resort",
@@ -257,7 +257,7 @@ const resorts = [
       contactEmail: "info@kirkwood.com",
       contactWebsite: "http://www.kirkwood.com/",
       coordinates: '38.684348, -120.065448',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 1, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 0}
     },
     {
       resortName: "Mammoth",
@@ -278,7 +278,7 @@ const resorts = [
       contactEmail: "800MAMMOTH@mammothresorts.com",
       contactWebsite: "http://www.mammothmountain.com/",
       coordinates: '37.651216, -119.036948',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 0, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Mount Baldy",
@@ -299,7 +299,7 @@ const resorts = [
       contactEmail: "contactus@mtbaldy.com",
       contactWebsite: "http://mtbaldyskilifts.com/",
       coordinates: '34.237796, -117.657823',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 0, 'snowboardLessons': 0, 'equipmentRentals': 0, 'adaptiveProgram': 1}
     },
     {
       resortName: "Mount Shasta",
@@ -320,7 +320,7 @@ const resorts = [
       contactEmail: "thinksnow@skipark.com",
       contactWebsite: "https://www.skipark.com/",
       coordinates: '41.320922, -122.203831',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 1, 'skiLessons': 0, 'snowboardLessons': 1, 'equipmentRentals': 1, 'adaptiveProgram': 1}
     },
     {
       resortName: "Mount Waterman",
@@ -341,7 +341,7 @@ const resorts = [
       contactEmail: "mtwaterman@outlook.com",
       contactWebsite: "http://www.mtwaterman.org/",
       coordinates: '34.349542, -117.928732',
-      programs: {'kidsProgram': 0, 'womensProgram': 0, 'skiLessons': 1, 'snowboardLessons': 1, 'equipmentRentals': 0, 'adaptiveProgram': 1}
+      programs: {'kidsProgram': 1, 'womensProgram': 0, 'skiLessons': 0, 'snowboardLessons': 0, 'equipmentRentals': 0, 'adaptiveProgram': 0 }
     },
     {
       resortName: "Mountain High Ski Area",
