@@ -1,14 +1,13 @@
-import { useState, useContext } from 'react'
-import UserContext from '../context/UserContext'
-
-import {useLogin} from '../hooks/useLogin'
+import { useState } from 'react'
+// import {AuthContext} from '../context/AuthContext'
+import {useLogin} from '../hooks/useLogin.jsx'
 import logo from '../assets/logo.png'
 
 
 const Login = () => {
-    // const [email, setEmail] = useState('')
-    // const [password, setPassword] = useState('')
-    const { loggedInUser, setLoggedInUser } = useContext(UserContext)
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    // const { loggedInUser, setLoggedInUser } = useContext(UserContext)
     const [user, setUser] = useState({})
     const { login, error, isLoading } = useLogin()
 
@@ -65,7 +64,6 @@ const Login = () => {
             </div>
             
         </div>
-
     )
 }
 

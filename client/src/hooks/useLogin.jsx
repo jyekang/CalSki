@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UserContext from '../context/UserContext.jsx';
+import { useAuthContext } from './useAuthContext';
 
 export const useLogin = () => {
     const [error, setError] = useState(null);
@@ -10,9 +10,9 @@ export const useLogin = () => {
         setIsLoading(true);
         setError(null);
 
-        const response = await fetch ('/api/user/login', {
+        const response = await fetch('/api/user/login', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
         })
         const json = await response.json();
@@ -25,11 +25,10 @@ export const useLogin = () => {
             // save the user to local storage
             localStorage.setItem('user', JSON.stringify(json));
             // update the auth context
-            dispatch({type: 'LOGIN', payload: json});
+            dispatch({ type: 'LOGIN', payload: json });
 
             setIsLoading(false);
         }
-}
-
+    }
     return { login, isLoading, error };
 }
