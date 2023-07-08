@@ -1,35 +1,31 @@
-// import { useState } from "react";
-// import { useAuthContext } from "./context/authContext.jsx";
+import { useState } from "react";
+import { useAuthContext } from "./useAuthContext";
+import axios from 'axios'
 
-// export const useSignup = () => {
-//     const [error, setError] = useState(null);
-//     const [isLoading, setIsLoading] = useState(null);
-//     const { dispatch } = useAuthContext();
+export const useSignup = () => {
+    const [error, setError] = useState(null);
+    const [isLoading, setIsLoading] = useState(null);
+    const { dispatch } = useAuthContext();
 
-//     const signup = async (email, password) => {
-//         setIsLoading(true);
-//         setError(null);
+    const signup = async (email, password) => {
+        setIsLoading(true);
+        setError(null);
+        console.log({ email, password })
 
-//         const response = await fetch ('/api/user/signup', {
-//             method: 'POST',
-//             headers: {'Content-Type': 'application/json'},
-//             body: JSON.stringify({ email, password })
-//         })
-//         const json = await response.json();
+        await axios.post('http://localhost:3001/api/user/signup', { email, password })
+            .then(res => {
+                // save the user to local storage
+                localStorage.setItem('user', JSON.stringify(response.data));
+                // update the auth context
+                dispatch({ type: 'LOGIN', payload: response.data });
+                setIsLoading(false);
+            })
+            .catch(error => {
+                console.log('fail')
+                setIsLoading(false);
+                setError(error.message);
+            })
+    }
 
-//         if (!response.ok) {
-//             setIsLoading(false);
-//             setError(json.error);
-//         }
-//         if (response.ok) {
-//             // save the user to local storage
-//             localStorage.setItem('user', JSON.stringify(json));
-//             // update the auth context
-//             dispatch({type: 'LOGIN', payload: json});
-
-//             setIsLoading(false);
-//         }
-// }
-
-//     return { signup, isLoading, error };
-// }
+    return { signup, isLoading, error };
+}

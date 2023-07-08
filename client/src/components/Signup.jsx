@@ -1,13 +1,12 @@
 import { useState, useContext } from 'react'
-// import { useSignup } from '../hooks/useSignup'
-import UserContext from '../context/UserContext'
+import { useSignup } from '../hooks/useSignup'
 
 const Signup = () => {
-    // const [email, setEmail] = useState('')
-    // const [password, setPassword] = useState('')
-    const { loggedInUser, setLoggedInUser } = useContext(UserContext)
-    const [user, setUser] = useState({})
-    // const { signup, error, isLoading } = useSignup()
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    // const { loggedInUser, setLoggedInUser } = useContext(UserContext)
+    // const [user, setUser] = useState({})
+    const { signup, error, isLoading } = useSignup()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
