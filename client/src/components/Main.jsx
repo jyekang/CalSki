@@ -6,6 +6,7 @@ import Signup from './Signup.jsx'
 import Resorts from './Resorts.jsx'
 import ResortsDetail from './ResortsDetail.jsx'
 import Plans from './Plans.jsx'
+import WebsiteReview from './websiteReview.jsx'
 
 const Main = () => {
     return (
@@ -17,6 +18,7 @@ const Main = () => {
                 <Route path='/resorts' element={<Resorts />} />
                 <Route path='/resorts/:id' element={<ResortsDetail />} />
                 <Route path='/plans' element={<Plans />} />
+                <Route path='/websiteReview' element={<WebsiteReview />} />
             </Routes>
         </div>
     )
