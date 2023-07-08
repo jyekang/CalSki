@@ -12,6 +12,13 @@ const Footer = () => {
             <h6 className="m-0">© J.E.X</h6>
         </div>
         
+        <div>
+        <h6 className="m-0">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        </h6>
+        </div>
     </div>
   )
 }

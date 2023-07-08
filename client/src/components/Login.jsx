@@ -8,7 +8,7 @@ const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     // const { loggedInUser, setLoggedInUser } = useContext(UserContext)
-    const [user, setUser] = useState({})
+    // const [user, setUser] = useState({})
     const { login, error, isLoading } = useLogin()
 
     const handleSubmit = async (e) => {
@@ -20,10 +20,20 @@ const Login = () => {
         // if not, alert the user that the email and password do not match
     }
 
+    // const handleChange = (e) => {
+    //     setUser({ ...user, [e.target.name]: e.target.value })
+    //     console.log(user)
+    // }
+
     const handleChange = (e) => {
-        setUser({ ...user, [e.target.name]: e.target.value })
-        console.log(user)
+        const { name, value } = e.target
+        if (name === 'email') {
+            setEmail(value)
+        } else if (name === 'password') {
+            setPassword(value)
+    
     }
+}
 
     return (
         <div className='login'>
@@ -38,7 +48,7 @@ const Login = () => {
                         id='login-email'
                         name='email'
                         onChange={handleChange}
-                        value={user.email}
+                        value={email}
                     />
                 </div>
 
@@ -50,12 +60,12 @@ const Login = () => {
                         type='password'
                         name='password'
                         onChange={handleChange}
-                        value={user.password}
+                        value={password}
                     />
                 </div>
 
 
-                <button disabled={isLoading}>Login</button>
+                <button type='submit' disabled={isLoading}>Login</button>
                 {error && <div className='error'>{error}</div> }
 
                 <button type='submit' className='btn btn-primary my-3'>Login</button>
@@ -66,5 +76,6 @@ const Login = () => {
         </div>
     )
 }
+
 
 export default Login
