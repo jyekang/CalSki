@@ -40,15 +40,16 @@ const Resorts = () => {
     <div className='resorts'>
       <div className='resorts-intro'>
         <p>California is home to numerous ski resorts that cater to winter sports enthusiasts of all skill levels. These resorts offer a variety of terrains, amenities, and natural beauty, making them popular destinations for locals and tourists alike.
-          <br />
+     
           California ski resorts have excellent snow quality, as the state’s climate is diverse and has high elevation. Many resorts receive abundant snowfall that ensures great skiing conditions for a longer season.
-          <br />
+      
           Though skiing and snowboarding are very popular, California ski resorts offer a number of additional winter activities, such as snowshoeing, snowmobiling, tubing, and ice skating.
-          <br />
+ 
           If outdoor activities are not for you, come enjoy the village areas that have plenty of lodges, restaurants, bars, and shops.
-          <br />
+  
           Whether you’re a seasoned skier,  first-timer, or not an outdoor enthusiast as all, California offers a wide range of activities to suit everyone.
-          <br />
+          <br/>
+          <br/>
           Check out destination options below.
         </p>
       </div>

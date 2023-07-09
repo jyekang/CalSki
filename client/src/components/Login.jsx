@@ -1,137 +1,81 @@
-import {useState} from 'react'
+import { useState } from 'react'
+// import {AuthContext} from '../context/AuthContext'
+import {useLogin} from '../hooks/useLogin.jsx'
+import logo from '../assets/logo.png'
+
 
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    // const { loggedInUser, setLoggedInUser } = useContext(UserContext)
+    // const [user, setUser] = useState({})
+    const { login, error, isLoading } = useLogin()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+       
+        await login(email, password)
+        // if email and password match the db, setLoggedInUser to the user
 
-        console.log(email, password)
+        // if not, alert the user that the email and password do not match
     }
+
+    // const handleChange = (e) => {
+    //     setUser({ ...user, [e.target.name]: e.target.value })
+    //     console.log(user)
+    // }
+
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        if (name === 'email') {
+            setEmail(value)
+        } else if (name === 'password') {
+            setPassword(value)
+    
+    }
+}
 
     return (
-        <form className='login' onSubmit={handleSubmit}>
-            <h3>Login</h3>
+        <div className='login'>
+            <div className='login-content'>
+            <form className='login-form' onSubmit={handleSubmit}>
+                <h3><img src={logo} alt="" /></h3>
+                <div className='mb-3 email-input'>
+                    <label htmlFor="login-email" className="form-label">Email:</label>
+                    <input
+                        className='form-control'
+                        type='email'
+                        id='login-email'
+                        name='email'
+                        onChange={handleChange}
+                        value={email}
+                    />
+                </div>
 
-            <label>Email:</label>
-            <input
-                type='email'
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-            />
-            <label>Password:</label>
-            <input
-                type='password'
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
-            />
+                <div className='mb-3 password-input'>
+                    <label htmlFor="login-password" className="form-label">Password:</label>
+                    <input
+                    className='form-control'
+                        id='login-password'
+                        type='password'
+                        name='password'
+                        onChange={handleChange}
+                        value={password}
+                    />
+                </div>
 
-            <button>Login</button>
-        </form>
+
+                <button type='submit' disabled={isLoading}>Login</button>
+                {error && <div className='error'>{error}</div> }
+
+                <button type='submit' className='btn btn-primary my-3'>Login</button>
+
+            </form>
+            </div>
+            
+        </div>
     )
-    }
-    
-    export default Login
+}
 
 
-
-
-
-
-// import React from 'react';
-// import { useState, useRef, useEffect, useContext  } from 'react'
-// import { Link } from'react-router-dom'
-// import AuthContext from './AuthProvider.jsx';
-// import axios from 'axios';
-// const LOGIN_URL = 'http://localhost:3001/api/login';
-//  // from https://mdbootstrap.com/docs/react/extended/login-form/ 
-
-// const Login = () => {
-//   const { setAuth } = useContext(AuthContext);
-//   const userRef = useRef();
-//   const errRef = useRef();
-
-//   const [user, setUser] = useState('');
-//   const [pwd, setPwd] = useState('');
-//   const [errMsg, setErrMsg] = useState('');
-//   const [success, setSuccess] = useState(false);
-
-//   useEffect(() => {
-//     userRef.current.focus();
-//   }, []);
-
-//   useEffect(() => {
-//     setErrMsg('')
-//   }, [user, pwd]);
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-
-//     try {
-//       const res = await axios.post(LOGIN_URL, {
-//         username: user,
-//         password: pwd,
-//       });
-//       console.log(res.data);
-//       setAuth({user, pwd})
-//       setUser('');
-//       setPwd('');
-//       setSuccess(true);
-//     } catch (err) {
-//       if(!err?.response) {
-//         setErrMsg('Invalid username or password');
-//       }
-     
-//     }
-//   }
-
-//   return (
-//     <>
-//       {success ? (
-//         <section>
-//           <h1>You are logged in</h1>
-//           <br />
-//           <p> 
-//             <Link to="/">Home</Link>
-//           </p>
-//         </section>
-//       ) : (
-        
-//     <div>
-//       <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-//       <h1>Log In</h1>
-//       <form onSubmit={handleSubmit}>
-//         <label htmlFor="username">Username</label>
-//         <input 
-//           type="text" 
-//           id="username" 
-//           ref={userRef} 
-//           value={user} 
-//           onChange={(e) => setUser(e.target.value)} 
-//           required/>
-
-//         <label htmlFor="password">Password</label>
-//         <input 
-//           type="password" 
-//           id="password" 
-//           value={pwd} 
-//           onChange={(e) => setPwd(e.target.value)} 
-//           required/>   
-
-//           <button type="submit">Log In</button>     
-//       </form>
-     
-//     </div>
-//       )}
-//       </>
-//     )
-//   }
-
-//   export default Login
-
-
-
-
-
-
+export default Login

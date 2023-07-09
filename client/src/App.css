@@ -6,8 +6,12 @@
   text-align: center;
 }
 
+.main {
+  min-height: calc(100vh - 116px);
+}
+
 .logo {
-  height: 40px;
+  height: 60px;
   padding: 0;
   will-change: filter;
 }
@@ -60,8 +64,43 @@
 }
 
 .footer {
-  height: 50px;
-  background-color: whitesmoke;
+  flex-wrap: wrap;
+  height: 200px;
+  background-color: rgb(26, 110, 171);
+}
+
+.footer h6 {
+  display: block;
+  margin: 0;
+}
+
+.nav-bar {
+  font-size: 20px;
+}
+
+.nav-bar li {
+margin-right: 20px;
+}
+
+.nav-bar a {
+  color: #121111;
+}
+
+.nav-bar a:hover {
+  color: #1468d6;
+}
+
+/* resorts */
+
+.resorts-intro {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+  text-align-last: center;
+  padding-bottom: 50px;
+  padding-top: 40px;
+  font-size: 21px;
+ 
 }
 
 /* resort result list*/
@@ -188,6 +227,29 @@
   color: rgb(9, 9, 9);
   font-size: 50px;
 }
+
+
+/* login */
+.login {
+  height: calc(100vh - 116px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(248,249,250);
+}
+
+.login img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.login-content {
+  width: 200px;
+  margin: 0 auto;
+  translate: 0 -80px;
+}
+
 
 
 
