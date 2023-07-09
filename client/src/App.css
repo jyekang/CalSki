@@ -72,7 +72,27 @@
 .footer h6 {
   display: block;
   margin: 0;
+  color:rgb(255, 251, 245);
 }
+
+
+.icon-row {
+    background-color: rgb(220, 183, 17);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 40px;
+  }
+  
+.icon-row .bi {
+    color: white;
+  }
+  
+  .icon-row h3 {
+    margin: 0;
+    margin-left: 160px;
+    margin-right: 160px
+  }
 
 .nav-bar {
   font-size: 20px;
