@@ -1,14 +1,13 @@
 # CalSki
 
-This app was developed by Xin Chen, Janice Kang, and Ethan Flatt.
+## Description
+
+This is a full-stack MERN application with full CRUD on the front and back-end, which allows users to plan a ski trip to any one of the twenty-six ski resort locations in California. A user will make an account and choose a ski resort they would like to visit, from there they can create a plan, read it, update it, and delete it if they please. A user can have multiple plans.This app was developed by Xin Chen, Janice Kang, and Ethan Flatt.
 
 - [Xin Chen's GitHub](https://github.com/chrischen96)
 - [Janice Kang's GitHub](https://github.com/jyekang)
 - [Ethan Flatt's GitHub](https://github.com/EthanFlatt)
 
-## Description
-
-This is a full-stack MERN application with full CRUD on the front and back-end, which allows users to plan a ski trip to any one of the twenty-six ski resort locations in California. A user will make an account and choose a ski resort they would like to visit, from there they can create a plan, read it, update it, and delete it if they please. A user can have multiple plans.
 
 ## ERD and CHD
 
