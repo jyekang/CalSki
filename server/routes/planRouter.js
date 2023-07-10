@@ -14,10 +14,13 @@
 
 import express from 'express';
 import controllers from '../controllers/planController.js'
+import requireAuth from './requireAuth.js';
 
 const { getPlans, getPlanById, createPlan, updatePlan, deletePlan } = controllers;
 
 const Router = express.Router();
+
+Router.use(requireAuth);
 
 Router.get('/', getPlans)
 Router.get('/:id', getPlanById)
