@@ -15,15 +15,15 @@ export const useSignup = () => {
         await axios.post('http://localhost:3001/api/user/signup', { email, password })
             .then(res => {
                 // save the user to local storage
-                localStorage.setItem('user', JSON.stringify(response.data));
+                localStorage.setItem('user', JSON.stringify(res.data));
                 // update the auth context
-                dispatch({ type: 'LOGIN', payload: response.data });
+                dispatch({ type: 'LOGIN', payload: res.data });
                 setIsLoading(false);
             })
             .catch(error => {
-                console.log('fail')
+                console.log('error', error)
                 setIsLoading(false);
-                setError(error.message);
+                setError(error.response.data.error);
             })
     }
 

@@ -4,7 +4,7 @@ const { Plans } = models
 
 const getPlans = async (req, res) => {
     try {
-        const plans = await Plans.find()
+        const plans = await Plans.find({ userName: req.user.email })
         return res.status(200).json(plans)
     } catch (error) {
         return res.status(500).json({ message: error.message })
@@ -39,6 +39,8 @@ const deletePlan = async (req, res) => {
 
 const createPlan = async (req, res) => {
     try {
+        console.log('line 42', req.body)
+        console.log('line 43', req.user)
         const plan = await Plans.create(req.body)
         await plan.save()
         return res.status(200).json(plan)

@@ -1,15 +1,18 @@
 import { useParams, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { useAuthContext } from "../hooks/useAuthContext"
 import axios from "axios"
 
 
 const ResortsDetail = () => {
   const { id } = useParams()
   const [resort, setResort] = useState({})
-  const [plan, setPlan] = useState({ userName: '64a2e28922dbf6cf158beb53' })
+  const [plan, setPlan] = useState({})
   const [confirm, setconfirm] = useState('')
   const [fatmap, setFatmap] = useState('')
   const [programs, setPrograms] = useState({})
+  const { user } = useAuthContext()
+  const localUser = JSON.parse(localStorage.getItem('user'))
 
   useEffect(() => {
     const getResort = async () => {
@@ -17,7 +20,7 @@ const ResortsDetail = () => {
         .then(res => {
           console.log(res.data.resort)
           setResort(res.data.resort)
-          setPlan({ ...plan, resortName: res.data.resort.resortName })
+          setPlan({ ...plan, userName: localUser.email, resortName: res.data.resort.resortName })
           const map = res.data.resort.coordinates.replace(/ /g, '')
           setFatmap(map)
           setPrograms(res.data.resort.programs)
@@ -27,11 +30,7 @@ const ResortsDetail = () => {
     getResort()
   }, [])
 
-  console.log('kids',programs.kidsProgram,'women',programs.womensProgram)
-
-  const gotoWeb = () => {
-    window.open(`www.google.com`, '_blank')
-  }
+  console.log(plan)
 
   const handleChange = (e) => {
     setPlan({ ...plan, [e.target.name]: e.target.value })
@@ -39,7 +38,7 @@ const ResortsDetail = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/api/plan', plan)
+    await axios.post('http://localhost:3001/api/plan', plan, { headers: { Authorization: `Bearer ${localUser.token}` } })
       .then(res => {
         // console.log(res)
         setconfirm(`You have successfully created you plan to ${resort.resortName}!`)
@@ -48,7 +47,6 @@ const ResortsDetail = () => {
         // console.log(err)
         setconfirm('Something went wrong, please try again.')
       })
-    setPlan({ userName: '64a2e28922dbf6cf158beb53', resortName: resort._id })
   }
 
   return (
@@ -67,10 +65,10 @@ const ResortsDetail = () => {
         <div className="detail-hero-img">
           <img src={resort.image} alt="" className="" />
         </div>
-        <button type="button" className="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#planModal" data-bs-whatever="">Create a Plan</button>
+        <button type="button" className="btn btn-primary my-4" data-bs-toggle="modal" data-bs-target="#planModal" data-bs-whatever="">Create a Plan</button>
       </div>
 
-      <div className="summary m-5">
+      <div className="summary">
         <div className="result-list">
           <p className="detail-description text-start mb-5 lh-base"><span className="fw-bold lh-lg">Description:</span> <br />{resort.description}</p>
           <div className="result-grid mb-5">
@@ -146,30 +144,44 @@ const ResortsDetail = () => {
               <h1 className="modal-title fs-5" id="planModalLabel">Create Plan</h1>
               <button type="button" className="btn-close" name="" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div className="modal-body">
-              <form className="text-start">
-                {/* <div className="mb-3">
+            {localUser ? (
+              <div className="modal-body">
+                <form className="text-start">
+                  {/* <div className="mb-3">
                   <label htmlFor="plan-name" className="col-form-label">Plan Name:</label>
                   <input type="text" className="form-control" id="plan-name" onChange={handleChange}/>
                 </div> */}
-                <div className="mb-3">
-                  <label htmlFor="plan-date" className="col-form-label">Date:</label>
-                  <input className="form-control" type="date" name="date" id="plan-date" onChange={handleChange}></input>
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="plan-comment" className="col-form-label">Note:</label>
-                  <input className="form-control" name="comment" id="plan-comment" onChange={handleChange}></input>
-                </div>
-                {/* <div className="mb-3">
+                  <div className="mb-3">
+                    <label htmlFor="plan-date" className="col-form-label">Date:</label>
+                    <input className="form-control" type="date" name="date" id="plan-date" onChange={handleChange}></input>
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="plan-comment" className="col-form-label">Note:</label>
+                    <input className="form-control" name="comment" id="plan-comment" onChange={handleChange}></input>
+                  </div>
+                  {/* <div className="mb-3">
                   <label htmlFor="plan-activity" className="col-form-label">Activity:</label>
                   <input className="form-control" id="plan-activity" onChange={handleChange}></input>
                 </div> */}
-              </form>
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal" onClick={handleSubmit}>Create Plan</button>
-            </div>
+                </form>
+              </div>
+
+            ) : (
+              <div><h3 className="m-5">Please Log in to create a plan.</h3></div>
+            )
+            }
+            {localUser ? (
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal" onClick={handleSubmit}>Create Plan</button>
+              </div>
+            ) : (
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" className="btn btn-primary" data-bs-dismiss="modal"><Link to='/login' className="text-white link-underline link-underline-opacity-0">Log in</Link></button>
+              </div>
+            )}
+
           </div>
         </div>
       </div>

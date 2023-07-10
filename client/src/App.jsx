@@ -16,7 +16,7 @@ function App() {
         <Header />
       </header>
       <main className='App-main'>
-          <Main />
+        <Main />
       </main>
       <footer className='App-footer'>
         <Footer />
